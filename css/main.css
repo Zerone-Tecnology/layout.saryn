@@ -44,11 +44,20 @@ body {
 a {
   color: #1F1F1F;
   transition: all 0.3s ease;
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
 }
 a:hover {
   color: #1F1F1F;
   transition: all 0.3s ease;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 h1 {
@@ -65,6 +74,16 @@ h1 {
 
 h2 {
   font-family: "Cambria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90%;
+  color: #008283;
+  margin: 0 0 30px 0;
+}
+
+h3 {
+  font-family: "Cambria";
   font-style: italic;
   font-weight: 400;
   font-size: 50px;
@@ -76,6 +95,15 @@ h2 {
   margin: 8px 0;
 }
 
+h4 {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 140%;
+  color: #1F1F1F;
+}
+
 p {
   font-family: "Segoe UI", sans-serif;
   font-style: normal;
@@ -84,6 +112,44 @@ p {
   line-height: 140%;
   color: #1F1F1F;
   margin: 0;
+}
+
+.nav {
+  background: #008283;
+  margin: 11px 0;
+}
+.nav .menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav .menu li {
+  border-left: 1px solid #fff;
+  padding: 18px 8px;
+}
+.nav .menu li a {
+  color: #fff;
+}
+.nav .menu li a:hover {
+  color: #1F1F1F;
+}
+.nav .menu li:last-child {
+  border-right: 1px solid #fff;
+  padding: 13px 10px;
+}
+.nav .menu li:last-child a {
+  padding: 4px 6px;
+  color: #1F1F1F;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 42px;
+}
+.nav .menu li:last-child a:hover {
+  background-color: #C4E2E2;
+  border: 1px solid #1F1F1F;
 }
 
 .info_text {
@@ -103,22 +169,37 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-.header .header_top .header_img {
+.header .header_top .header_logo {
   max-width: 140px;
   max-height: 89px;
 }
-.header .header_top .header_img img {
+.header .header_top .header_logo img {
   width: 100%;
   height: 100%;
+}
+.header .header_top .header_language {
+  display: flex;
+  left: 20%;
+  position: relative;
 }
 .header .header_top .header_language a {
   padding: 5px 6px;
   border: 1px solid #1F1F1F;
   border-radius: 50%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  width: 33px;
+  height: 33px;
+  display: block;
+  margin-left: 10px;
 }
 .header .header_top .header_language a:hover {
-  background-color: #008283;
+  background-color: #C4E2E2;
+}
+.header .header_top .header_language a.active {
   color: #fff;
+  background-color: #008283;
 }
 .header .header_top .header_auth a {
   padding: 5px 6px;
@@ -126,28 +207,20 @@ p {
   border-radius: 42px;
 }
 .header .header_top .header_auth a:hover {
-  background-color: #008283;
-}
-.header .header_bottom .nav .menu {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #3D3D3D;
-  border-bottom: 1px solid #3D3D3D;
-  padding: 17px 0;
-}
-.header .header_bottom .nav .menu li a {
-  padding: 5px 6px;
-}
-.header .header_bottom .nav .menu li a:hover {
-  border: 1px solid #1F1F1F;
-  border-radius: 42px;
+  background-color: #C4E2E2;
 }
 
 .wrapper .home_page {
   padding: 80px 0 90px 0;
   border-bottom: 1px solid #3D3D3D;
+}
+.wrapper .home_page .page_description p {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #1F1F1F;
 }
 .wrapper .home_page .search {
   float: right;
@@ -166,6 +239,9 @@ p {
 .wrapper .home_page .search a img {
   width: 18px;
   height: 18px;
+}
+.wrapper .home_page .search a:hover {
+  background-color: #C4E2E2;
 }
 .wrapper .main {
   display: flex;
@@ -213,6 +289,28 @@ p {
   color: #1F1F1F;
   opacity: 0.6;
   margin: 0;
+}
+.wrapper .main .archive_content {
+  width: 100%;
+}
+.wrapper .main .archive_content .archive_select {
+  border: 0;
+  border-top: 1px solid;
+  width: 100%;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 56px;
+  margin: 0;
+  padding: 18px 0 16px 0;
+}
+.wrapper .main .archive_content .archive_select li.active ul {
+  display: block;
+}
+.wrapper .main .archive_content .archive_select li ul {
+  display: none;
+}
+.wrapper .main .archive_content .archive_select:last-child {
+  border-bottom: 1px solid;
 }
 
 .footer {
