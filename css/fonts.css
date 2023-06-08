@@ -16,4 +16,10 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/Cambria/Cambria.eot?#iefix") format("embedded-opentype"), url("../fonts/Cambria/Cambria.woff") format("woff"), url("../fonts/Cambria/Cambria.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CM Literata";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/CM Literata/cmlirta_n.eot?#iefix") format("embedded-opentype"), url("../fonts/CM Literata/cmlirta_n.woff") format("woff"), url("../fonts/CM Literata/cmlirta_n.ttf") format("truetype");
 }/*# sourceMappingURL=fonts.css.map */

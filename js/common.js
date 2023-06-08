@@ -37,6 +37,7 @@ $(function() {
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 	
+	
 });
 
 $(window).load(function() {
@@ -45,3 +46,4 @@ $(window).load(function() {
 	$(".loader").delay(400).fadeOut("slow");
 
 });
+
