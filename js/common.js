@@ -45,5 +45,14 @@ $(window).load(function() {
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
 
+	$("#burger_menu").on("click", function(){
+		$("#burger_menu").toggleClass("active");
+		$("#nav").fadeToggle("slow");
+		$("#mobile_search").toggleClass("active");
+		$(".header_auth").toggleClass("active");
+		$(".header_language").toggleClass("active");
+		$(".header").toggleClass("active");
+	});
+
 });
 
