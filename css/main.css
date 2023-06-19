@@ -223,6 +223,13 @@ p {
   line-height: 140%;
   color: #1F1F1F;
 }
+@media only screen and (max-width: 768px) {
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
 
 input {
   padding: 15px 20px;
@@ -352,8 +359,16 @@ ol[type=a] {
   border: 1px solid #1F1F1F;
   top: 100%;
 }
+@media only screen and (max-width: 1024px) {
+  .nav .menu li .sub_menu {
+    position: relative;
+    width: 100%;
+    background: #F6F6F6;
+  }
+}
 .nav .menu li .sub_menu > li {
   border: 0;
+  background: #F6F6F6;
 }
 .nav .menu li .sub_menu > li > a {
   color: #1F1F1F;
@@ -519,10 +534,66 @@ ol[type=a] {
 }
 .wrapper .page_article .page_description_bottom {
   margin-top: 30px;
+  position: relative;
+}
+.wrapper .page_article .page_description_bottom input {
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+  display: none;
+  padding: 24px 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
 }
 .wrapper .page_article .page_description_bottom.issue_info {
   display: flex;
   justify-content: space-between;
+}
+.wrapper .page_article .page_description_bottom .search_btn_close {
+  position: absolute;
+  margin-top: 28px;
+  display: none;
+  border: 0;
+  background: none;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  right: 0;
+  top: 0;
+}
+.wrapper .page_article .page_description_bottom .search_btn_close span {
+  transform: scale(0);
+  transition: all 0.4s linear;
+}
+.wrapper .page_article .page_description_bottom .search_btn_close::before, .wrapper .page_article .page_description_bottom .search_btn_close::after {
+  top: 9px;
+}
+.wrapper .page_article .page_description_bottom .search_btn_close::before {
+  transform: rotate(45deg);
+}
+.wrapper .page_article .page_description_bottom .search_btn_close::after {
+  transform: rotate(-45deg);
+}
+.wrapper .page_article .page_description_bottom .search_btn_close::before, .wrapper .page_article .page_description_bottom .search_btn_close::after {
+  content: "";
+  position: absolute;
+  background: #1F1F1F;
+  border-radius: 2px;
+  width: 22.74px;
+  height: 2px;
+  left: 0;
+  transition: all 0.4s linear;
+}
+.wrapper .page_article .page_description_bottom .search_btn_close span {
+  position: absolute;
+  background: #1F1F1F;
+  border-radius: 2px;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  top: 8px;
+  transition: all 0.4s linear;
 }
 .wrapper .page_article .page_description_bottom .search_btn {
   padding: 11px;
@@ -533,7 +604,10 @@ ol[type=a] {
   justify-content: center;
   width: 40px;
   height: 40px;
-  float: right;
+  position: absolute;
+  right: 5%;
+  top: 0;
+  margin-top: 20px;
 }
 @media only screen and (max-width: 1024px) {
   .wrapper .page_article .page_description_bottom .search_btn {
@@ -587,6 +661,11 @@ ol[type=a] {
 .wrapper .main .content .main_content {
   margin-bottom: 80px;
 }
+@media only screen and (max-width: 768px) {
+  .wrapper .main .content .main_content {
+    margin-bottom: 60px;
+  }
+}
 .wrapper .main .content .main_content .about_journal {
   font-family: "Segoe UI", sans-serif;
   font-style: normal;
@@ -594,6 +673,13 @@ ol[type=a] {
   font-size: 24px;
   line-height: 140%;
   color: #1F1F1F;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper .main .content .main_content .about_journal {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+  }
 }
 .wrapper .main .sidebar {
   width: 30%;
@@ -884,6 +970,7 @@ ol[type=a] {
 }
 @media only screen and (max-width: 425px) {
   .footer .footer_top {
+    padding-bottom: 63px;
     flex-direction: column;
   }
   .footer .footer_top > div {
@@ -892,6 +979,11 @@ ol[type=a] {
 }
 .footer .footer_top > div {
   width: 24%;
+}
+@media only screen and (max-width: 425px) {
+  .footer .footer_top > div {
+    width: 100%;
+  }
 }
 .footer .footer_top .footer_contact_number {
   display: flex;
@@ -936,4 +1028,12 @@ ol[type=a] {
   font-size: 18px;
   line-height: 140%;
   color: #FFFFFF;
+}
+@media only screen and (max-width: 375px) {
+  .footer a,
+  .footer p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+  }
 }/*# sourceMappingURL=main.css.map */
