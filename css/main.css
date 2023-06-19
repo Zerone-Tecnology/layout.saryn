@@ -270,6 +270,26 @@ input {
   opacity: 0.8;
   outline: none;
 }
+input ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #1F1F1F;
+  opacity: 0.5;
+}
+input :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #1F1F1F;
+  opacity: 0.5;
+}
+input ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #1F1F1F;
+  opacity: 0.5;
+}
+input :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #1F1F1F;
+  opacity: 0.5;
+}
 
 .default_btn {
   padding: 14px 0;
@@ -1028,7 +1048,8 @@ ol[type=a] {
   display: flex;
   justify-content: space-between;
 }
-.wrapper .main .search_content .filter .filter_left, .wrapper .main .search_content .filter .filter_right {
+.wrapper .main .search_content .filter .filter_left,
+.wrapper .main .search_content .filter .filter_right {
   display: flex;
   gap: 20px;
 }

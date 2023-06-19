@@ -346,6 +346,34 @@ input {
   color: #1F1F1F;
   opacity: 0.8;
   outline: none;
+
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #1F1F1F;
+
+    opacity: 0.5;
+  }
+
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #1F1F1F;
+
+    opacity: 0.5;
+  }
+
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #1F1F1F;
+
+    opacity: 0.5;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #1F1F1F;
+
+    opacity: 0.5;
+  }
 }
 
 .default_btn {
@@ -396,44 +424,50 @@ input {
   }
 }
 
-.breadcrumb{
+.breadcrumb {
   list-style: none;
   display: flex;
   padding: 0;
   height: auto;
   margin-bottom: 0;
-  li{
-    font-family: 'Segoe UI',sans-serif;
+
+  li {
+    font-family: 'Segoe UI', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
     color: #A4A4A4;
     margin: 0;
-    a{
+
+    a {
       color: $primary;
       font-weight: 400;
-    font-size: 16px;
-    line-height: 120%;
+      font-size: 16px;
+      line-height: 120%;
     }
-    &::after{
+
+    &::after {
       content: "-";
       margin-left: 8px;
       margin-right: 8px;
     }
-    &:last-child{
-      &::after{
+
+    &:last-child {
+      &::after {
         display: none;
       }
     }
   }
 }
-.pages_btns{
+
+.pages_btns {
   list-style: none;
   display: flex;
   margin-top: 60px;
   padding: 0;
-  li{
+
+  li {
     margin: 0 5px;
     padding: 5px 6px;
     border: 1px solid $primary;
@@ -458,6 +492,7 @@ input {
     }
   }
 }
+
 ol[type="a"] {
   margin-top: 25px;
 }
@@ -480,8 +515,9 @@ ol[type="a"] {
     margin: 0;
     padding: 0;
     position: relative;
-    &>.disable-link{
-      &>a{
+
+    &>.disable-link {
+      &>a {
         pointer-events: none;
       }
     }
@@ -541,7 +577,8 @@ ol[type="a"] {
           position: relative;
           width: 100%;
           background: #F6F6F6;
-          a{
+
+          a {
             &:hover {
               a {
                 color: #fff;
@@ -1216,21 +1253,27 @@ ol[type="a"] {
         }
       }
     }
-    .search_content{
+
+    .search_content {
       width: 70%;
-      .filter{
+
+      .filter {
         display: flex;
         justify-content: space-between;
-        .filter_left,.filter_right{
+
+        .filter_left,
+        .filter_right {
           display: flex;
           gap: 20px;
         }
-        .filter_left{
+
+        .filter_left {
           // &::after{
           //   content: ;
           // }
         }
-        select{
+
+        select {
           padding: 13px 20px;
           border: 1px solid #1F1F1F;
           font-family: 'Segoe UI', sans-serif;
@@ -1247,6 +1290,7 @@ ol[type="a"] {
     }
   }
 }
+
 .footer {
   margin-top: 60px;
   background-color: #313131;
