@@ -334,7 +334,7 @@ input {
 
 .networks {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   @include respond-to(_425){
     justify-content: flex-start;
@@ -372,17 +372,32 @@ ol[type="a"] {
     align-items: center;
     margin: 0;
     padding: 0;
+    position: relative;
+    
 
     @include respond-to(_1024) {
       flex-direction: column;
       align-items: flex-start;
-
     }
 
     li {
       border-left: 1px solid #fff;
-      padding: 18px 8px;
+      padding: 18px 9px;
       margin: 0;
+      transition: all .4s ease;
+      position: relative;
+      &.dropdown_menu{
+        &::after{
+          content: url("../img/menu_vectore.png");
+          height: 6px;
+          display: flex;
+          justify-content: center;
+          top: 52%;
+          position: absolute;
+          left: 0;
+          right: 0;
+        }
+      }
 
       @include respond-to(_1024) {
         border: 0;
@@ -396,33 +411,41 @@ ol[type="a"] {
         display: block;
         height: 100%;
         color: #fff;
-
-        &:hover {
-          color: $primary;
+      }
+      .sub_menu{
+        display: none;
+        position: absolute;
+        list-style: none;
+        padding: 0;
+        left: 0;
+        background: #F6F6F6;
+        border: 1px solid #1F1F1F;
+        top: 100%;
+        
+        &>li{
+          border: 0;
+          &>a{
+            color: $primary;
+          }
+          &:hover{
+            a{
+              color: #fff;
+            }
+          }
+        }
+      }
+      &:hover{
+        background: linear-gradient(0deg, #865396, #865396), #814594;
+        transition: all .4s ease;
+        &>.sub_menu{
+          display: block;
         }
       }
 
       &:last-child {
         border-right: 1px solid #fff;
-        padding: 13px 10px;
-
-        @include respond-to(_1024) {
-          border: 0;
-        }
-
-        a {
-          padding: 4px 6px;
-          color: $primary;
-          background: #fff;
-          border: 1px solid #fff;
-          border-radius: 42px;
-
-          &:hover {
-            background-color: $hover;
-            border: 1px solid $primary;
-          }
-        }
       }
+
     }
   }
 }
@@ -664,7 +687,15 @@ ol[type="a"] {
       .main_content {
         margin-bottom: 80px;
 
-        p {}
+        .about_journal{
+          font-family: 'Segoe UI',sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 140%;
+          color: #1F1F1F;
+
+        }
       }
 
 
@@ -1018,6 +1049,9 @@ ol[type="a"] {
         margin-bottom: 20px;
       }
     }
+    &>div{
+      width: 24%;
+    }
 
     .footer_contact_number {
       display: flex;
@@ -1026,6 +1060,9 @@ ol[type="a"] {
       a {
         margin-bottom: 5px;
       }
+    }
+    .footer_network{
+      margin-right: 5%;
     }
   }
 
@@ -1060,9 +1097,8 @@ ol[type="a"] {
     font-family: 'Segoe UI', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 130%;
-    // text-transform: uppercase;
+    font-size: 18px;
+    line-height: 140%;
     color: #FFFFFF;
 
   }

@@ -265,7 +265,7 @@ input {
 
 .networks {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 @media only screen and (max-width: 425px) {
@@ -303,6 +303,7 @@ ol[type=a] {
   align-items: center;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu {
@@ -312,8 +313,20 @@ ol[type=a] {
 }
 .nav .menu li {
   border-left: 1px solid #fff;
-  padding: 18px 8px;
+  padding: 18px 9px;
   margin: 0;
+  transition: all 0.4s ease;
+  position: relative;
+}
+.nav .menu li.dropdown_menu::after {
+  content: url("../img/menu_vectore.png");
+  height: 6px;
+  display: flex;
+  justify-content: center;
+  top: 52%;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu li {
@@ -329,28 +342,34 @@ ol[type=a] {
   height: 100%;
   color: #fff;
 }
-.nav .menu li a:hover {
+.nav .menu li .sub_menu {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  left: 0;
+  background: #F6F6F6;
+  border: 1px solid #1F1F1F;
+  top: 100%;
+}
+.nav .menu li .sub_menu > li {
+  border: 0;
+}
+.nav .menu li .sub_menu > li > a {
   color: #1F1F1F;
+}
+.nav .menu li .sub_menu > li:hover a {
+  color: #fff;
+}
+.nav .menu li:hover {
+  background: linear-gradient(0deg, #865396, #865396), #814594;
+  transition: all 0.4s ease;
+}
+.nav .menu li:hover > .sub_menu {
+  display: block;
 }
 .nav .menu li:last-child {
   border-right: 1px solid #fff;
-  padding: 13px 10px;
-}
-@media only screen and (max-width: 1024px) {
-  .nav .menu li:last-child {
-    border: 0;
-  }
-}
-.nav .menu li:last-child a {
-  padding: 4px 6px;
-  color: #1F1F1F;
-  background: #fff;
-  border: 1px solid #fff;
-  border-radius: 42px;
-}
-.nav .menu li:last-child a:hover {
-  background-color: #C4E2E2;
-  border: 1px solid #1F1F1F;
 }
 
 .info_text {
@@ -567,6 +586,14 @@ ol[type=a] {
 }
 .wrapper .main .content .main_content {
   margin-bottom: 80px;
+}
+.wrapper .main .content .main_content .about_journal {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1F1F1F;
 }
 .wrapper .main .sidebar {
   width: 30%;
@@ -863,12 +890,18 @@ ol[type=a] {
     margin-bottom: 20px;
   }
 }
+.footer .footer_top > div {
+  width: 24%;
+}
 .footer .footer_top .footer_contact_number {
   display: flex;
   flex-direction: column;
 }
 .footer .footer_top .footer_contact_number a {
   margin-bottom: 5px;
+}
+.footer .footer_top .footer_network {
+  margin-right: 5%;
 }
 .footer .footer_bottom {
   display: flex;
@@ -900,7 +933,7 @@ ol[type=a] {
   font-family: "Segoe UI", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 130%;
+  font-size: 18px;
+  line-height: 140%;
   color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
