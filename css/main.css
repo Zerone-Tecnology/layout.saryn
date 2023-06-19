@@ -445,6 +445,9 @@ ol[type=a] {
   left: 0;
   right: 0;
 }
+.nav .menu li.dropdown_menu:hover::after {
+  content: url("../img/menu_hover_vector.png");
+}
 @media only screen and (max-width: 1024px) {
   .nav .menu li {
     border: 0;
@@ -483,19 +486,30 @@ ol[type=a] {
 .nav .menu li .sub_menu > li {
   border: 0;
   background: #F6F6F6;
+  cursor: pointer;
+}
+.nav .menu li .sub_menu > li:hover {
+  background-color: #C4E2E2;
 }
 .nav .menu li .sub_menu > li > a {
   color: #1F1F1F;
 }
 .nav .menu li:hover {
-  background: linear-gradient(0deg, #865396, #865396), #814594;
+  background-color: #E0E0E0;
   transition: all 0.4s ease;
+}
+.nav .menu li:hover a {
+  color: #1F1F1F;
 }
 .nav .menu li:hover > .sub_menu {
   display: block;
 }
 .nav .menu li:last-child {
   border-right: 1px solid #fff;
+  background: linear-gradient(0deg, #865396, #865396), #814594;
+}
+.nav .menu li:last-child:hover a {
+  color: #1F1F1F;
 }
 
 .info_text {
@@ -1040,6 +1054,40 @@ ol[type=a] {
 }
 .wrapper .main .collegiya .block_collegiya .collegiya_popup .collegiya_popup_bottom p {
   width: 100%;
+}
+.wrapper .main .error_page {
+  width: 100%;
+}
+.wrapper .main .error_page .error_404 {
+  font-family: "CM Literata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 240px;
+  line-height: 90%;
+  color: #008283;
+  padding: 120px 0 60px 0;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #1F1F1F;
+  width: -moz-min-content;
+  width: min-content;
+}
+.wrapper .main .error_page p {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1F1F1F;
+  text-align: center;
+}
+.wrapper .main .error_page .btn_404 {
+  padding: 6px 24px;
+  border: 1px solid #1F1F1F;
+  border-radius: 42px;
+  margin: 0 auto;
+  max-width: 200px;
+  display: block;
 }
 .wrapper .main .search_content {
   width: 70%;
