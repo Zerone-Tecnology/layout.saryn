@@ -761,6 +761,9 @@ ol[type=a] {
   padding: 0;
   border-bottom: 1px solid #3D3D3D;
 }
+.wrapper .main.archive_page {
+  border: 0;
+}
 @media only screen and (max-width: 425px) {
   .wrapper .main {
     flex-direction: column;
@@ -868,32 +871,52 @@ ol[type=a] {
   font-size: 42px;
   line-height: 56px;
   margin: 0;
-  padding: 18px 0 16px 0;
+  padding: 30px 20px;
   position: relative;
   list-style: none;
 }
 .wrapper .main .archive_content .archive_select li {
   cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+.wrapper .main .archive_content .archive_select li.active {
+  color: #008283;
 }
 .wrapper .main .archive_content .archive_select li.active ul {
-  display: block;
+  display: flex;
 }
 .wrapper .main .archive_content .archive_select li ul {
   display: none;
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.wrapper .main .archive_content .archive_select li ul > li {
+  width: 25%;
+  margin-bottom: 40px;
+}
+.wrapper .main .archive_content .archive_select li ul > li a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.wrapper .main .archive_content .archive_select li ul > li a img {
+  max-width: 220px;
+}
+.wrapper .main .archive_content .archive_select > li::after {
+  content: url("../img/archive_dropdown.png");
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -9;
+  width: 24px;
+  height: 12px;
 }
 .wrapper .main .archive_content .archive_select:last-child {
   border-bottom: 1px solid;
-}
-.wrapper .main .archive_content .archive_select::after {
-  content: url("../img/archive_dropdown.png");
-  position: absolute;
-  width: auto;
-  height: -moz-fit-content;
-  height: fit-content;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -9;
 }
 .wrapper .main .issue_content {
   width: 70%;
