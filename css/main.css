@@ -122,6 +122,33 @@ a:hover {
   text-decoration: none;
 }
 
+.issue_block {
+  padding: 30px 20px;
+  border: 1px solid #1F1F1F;
+  filter: drop-shadow(0px 13px 12px rgba(34, 34, 34, 0.25));
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.issue_block:hover {
+  box-shadow: 0px 8px 17px 8px rgba(0, 130, 131, 0.66);
+  transition: all 0.3s ease;
+}
+.issue_block h4 {
+  margin: 10px 0 0 0;
+}
+.issue_block p {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #1F1F1F;
+  opacity: 0.8;
+  margin: 0;
+}
+
 ul,
 ol {
   font-family: "Segoe UI", sans-serif;
@@ -288,6 +315,60 @@ input {
   max-height: 21px;
 }
 
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  height: auto;
+  margin-bottom: 0;
+}
+.breadcrumb li {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #A4A4A4;
+  margin: 0;
+}
+.breadcrumb li::after {
+  content: "-";
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.breadcrumb li:last-child::after {
+  display: none;
+}
+
+.pages_btns {
+  list-style: none;
+  display: flex;
+  margin-top: 60px;
+  padding: 0;
+}
+.pages_btns li {
+  margin: 0 5px;
+  padding: 5px 6px;
+  border: 1px solid #1F1F1F;
+  border-radius: 50%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  width: 33px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.pages_btns li:hover {
+  background-color: #C4E2E2;
+}
+.pages_btns li.active {
+  color: #fff;
+  background-color: #008283;
+}
+
 ol[type=a] {
   margin-top: 25px;
 }
@@ -365,6 +446,9 @@ ol[type=a] {
     width: 100%;
     background: #F6F6F6;
   }
+  .nav .menu li .sub_menu a:hover a {
+    color: #fff;
+  }
 }
 .nav .menu li .sub_menu > li {
   border: 0;
@@ -372,9 +456,6 @@ ol[type=a] {
 }
 .nav .menu li .sub_menu > li > a {
   color: #1F1F1F;
-}
-.nav .menu li .sub_menu > li:hover a {
-  color: #fff;
 }
 .nav .menu li:hover {
   background: linear-gradient(0deg, #865396, #865396), #814594;
@@ -775,32 +856,6 @@ ol[type=a] {
   padding-right: 50px;
   border-right: 1px solid #3D3D3D;
 }
-.wrapper .main .issue_content .issue_block {
-  padding: 30px 20px;
-  border: 1px solid #1F1F1F;
-  filter: drop-shadow(0px 13px 12px rgba(34, 34, 34, 0.25));
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.wrapper .main .issue_content .issue_block:hover {
-  box-shadow: 0px 8px 17px 8px rgba(0, 130, 131, 0.66);
-  transition: all 0.3s ease;
-}
-.wrapper .main .issue_content .issue_block h4 {
-  margin: 10px 0 0 0;
-}
-.wrapper .main .issue_content .issue_block p {
-  font-family: "Segoe UI", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-transform: uppercase;
-  color: #1F1F1F;
-  opacity: 0.8;
-  margin: 0;
-}
 .wrapper .main .issue_content h4 {
   margin: 40px 0 20px 0;
   font-size: 20px;
@@ -955,6 +1010,30 @@ ol[type=a] {
 }
 .wrapper .main .collegiya .block_collegiya .collegiya_popup .collegiya_popup_bottom p {
   width: 100%;
+}
+.wrapper .main .search_content {
+  width: 70%;
+}
+.wrapper .main .search_content .filter {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .main .search_content .filter .filter_left, .wrapper .main .search_content .filter .filter_right {
+  display: flex;
+  gap: 20px;
+}
+.wrapper .main .search_content .filter select {
+  padding: 13px 20px;
+  border: 1px solid #1F1F1F;
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
 }
 
 .footer {

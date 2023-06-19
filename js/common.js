@@ -56,10 +56,13 @@ $(window).load(function() {
 	$(".search_btn").on("click", function(){
 		$(".search_input").fadeIn("slow");
 		$(".search_btn_close").fadeIn("slow");
+		$(".search_btn").attr("type","submit");
 	});
 	$(".search_btn_close").on("click", function(){
 		$(".search_input").fadeOut("slow");
 		$(".search_btn_close").fadeOut("slow");
+		$(".search_btn").removeAttr("type","submit");
+
 	});
 
 });

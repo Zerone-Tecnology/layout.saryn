@@ -48,14 +48,35 @@
 					<a href="#">Регистрация</a>
 					<a href="#">Вход</a>
 				</div>
+				<div class="mobile_menu">
+					<div class="burger_menu" id="burger_menu">
+						<span></span>
+					</div>
+				</div>
+				<div class="mobile_search" id="mobile_search">
+					<input type="text" placeholder="Что Вы хотите найти?">
+					
+				</div>
 			</div>
 		</div>
 	</header>
-    <nav class="nav">
+	<nav class="nav" id="nav">
 		<div class="container">
-			<ul class="menu">
-				<li><a href="#">О журнале</a></li>
-				<li><a href="#">Руководство для авторов</a></li>
+			<ul class="menu" id="menu">
+				<li class="dropdown_menu"><a href="#">О журнале</a>
+					<ul class="sub_menu">
+						<li><a href="">О журнале</a></li>
+						<li><a href="">Редакционная коллегия</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</li>
+				<li class="dropdown_menu"><a href="#">Руководство для авторов</a>
+					<ul class="sub_menu">
+						<li><a href="">О журнале</a></li>
+						<li><a href="">Редакционная коллегия</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</li>
 				<li><a href="#">Рецензирование</a></li>
 				<li><a href="#">Политика журнала</a></li>
 				<li><a href="issue.html">Текущий выпуск</a></li>
@@ -66,20 +87,48 @@
 	</nav>
 	<div class="wrapper">
 		<div class="container">
+            <ul class="breadcrumb">
+                <li>Главная</li>
+                <li>Результаты поиска</li>
+            </ul>
 			<div class="page_article">
 				<div class="page_description">
-					<h2>Текущий выпуск</h2>
+					<h2>Результаты поиска</h2>
 				</div>
 				<div class="page_description_bottom">
-					<a href="#" class="search_btn"><img src="img/search.png" alt=""></a>
+					<input type="text" placeholder="Что Вы хотите найти?" class="search_input">
+					<button class="search_btn"><img src="img/search.png" alt=""></button>
+					<button class="search_btn_close"><span></span></button>
 				</div>
 			</div>
 			<div class="main">
-				<div class="issue_content">
-                    <h5>Актуальные проблемы музыкознания</h5>
-                    <div class="issue_block">
-                        <p>Бакир Баяхунов</p>
-                        <h4>Рожденная побеждать (Газиза Жубанова)</h4>
+				<div class="search_content">
+                    <p class="info_text">По дате публикации</p>
+                    <div class="filter">
+                        <div class="filter_left">
+                            <select name="" id="">
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="№4">№4</option>
+                                <option value="№3">№3</option>
+                                <option value="№2">№2</option>
+                            </select>
+                        </div>
+                        <div class="filter_right">
+                            <select name="" id="">
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="№4">№4</option>
+                                <option value="№3">№3</option>
+                                <option value="№2">№2</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="issue_block">
                         <p>Бакир Баяхунов</p>
@@ -89,22 +138,18 @@
                         <p>Бакир Баяхунов</p>
                         <h4>Рожденная побеждать (Газиза Жубанова)</h4>
                     </div>
-                </div>
-                <div class="sidebar">
-                    <img src="img/issue_img.png" alt="" class="issue_img">
-                    <p class="info_text">Опубликован</p>
-                    <p>01 марта 2022</p>
-                    <div class="issn">
-						<div class="issn_left">
-							<p class="info_text">Номер журнала</p>
-							<p>№1</p>
-						</div>
-						<div class="issn_right">
-							<p class="info_text">Том</p>
-							<p>34</p>
-						</div>
-					</div>
-                    <a href="#" class="download_pdf"><img src="img/download_vector.png"> Скачать выпуск pdf</a>
+                    <div class="issue_block">
+                        <p>Бакир Баяхунов</p>
+                        <h4>Рожденная побеждать (Газиза Жубанова)</h4>
+                    </div>
+                    <ul class="pages_btns">
+                        <li class="prev_page"><img src="img/prev_page.png" alt=""></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li class="next_page"><img src="img/next_page.png" alt=""></li>
+                    </ul>
                 </div>
 			</div>
 		</div>
@@ -137,7 +182,6 @@
 		</div>
 	</footer>
 
-
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
@@ -150,7 +194,7 @@
 	<script src="libs/animate/animate-css.js"></script>
 	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
 	<script src="js/common.js"></script>
-    <script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 
