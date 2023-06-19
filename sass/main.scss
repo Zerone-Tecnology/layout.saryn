@@ -395,6 +395,7 @@ input {
     }
   }
 }
+
 .breadcrumb{
   list-style: none;
   display: flex;
@@ -409,6 +410,12 @@ input {
     line-height: 120%;
     color: #A4A4A4;
     margin: 0;
+    a{
+      color: $primary;
+      font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    }
     &::after{
       content: "-";
       margin-left: 8px;
@@ -473,6 +480,11 @@ ol[type="a"] {
     margin: 0;
     padding: 0;
     position: relative;
+    &>.disable-link{
+      &>a{
+        pointer-events: none;
+      }
+    }
 
 
     @include respond-to(_1024) {
@@ -523,6 +535,7 @@ ol[type="a"] {
         background: #F6F6F6;
         border: 1px solid #1F1F1F;
         top: 100%;
+        z-index: 99;
 
         @include respond-to(_1024) {
           position: relative;
@@ -1211,6 +1224,11 @@ ol[type="a"] {
         .filter_left,.filter_right{
           display: flex;
           gap: 20px;
+        }
+        .filter_left{
+          // &::after{
+          //   content: ;
+          // }
         }
         select{
           padding: 13px 20px;

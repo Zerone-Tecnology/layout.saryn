@@ -331,6 +331,12 @@ input {
   color: #A4A4A4;
   margin: 0;
 }
+.breadcrumb li a {
+  color: #1F1F1F;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+}
 .breadcrumb li::after {
   content: "-";
   margin-left: 8px;
@@ -393,6 +399,9 @@ ol[type=a] {
   padding: 0;
   position: relative;
 }
+.nav .menu > .disable-link > a {
+  pointer-events: none;
+}
 @media only screen and (max-width: 1024px) {
   .nav .menu {
     flex-direction: column;
@@ -439,6 +448,7 @@ ol[type=a] {
   background: #F6F6F6;
   border: 1px solid #1F1F1F;
   top: 100%;
+  z-index: 99;
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu li .sub_menu {
