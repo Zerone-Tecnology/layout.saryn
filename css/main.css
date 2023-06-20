@@ -163,6 +163,10 @@ ol li {
   margin-bottom: 30px;
 }
 
+ol {
+  padding-left: 18px;
+}
+
 h1 {
   font-family: "CM Literata";
   font-style: normal;
@@ -352,7 +356,7 @@ input :-ms-input-placeholder {
   margin: 0;
 }
 .breadcrumb li a {
-  color: #1F1F1F;
+  color: #A4A4A4;
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
@@ -361,6 +365,9 @@ input :-ms-input-placeholder {
   content: "-";
   margin-left: 8px;
   margin-right: 8px;
+}
+.breadcrumb li:last-child a {
+  color: #1F1F1F;
 }
 .breadcrumb li:last-child::after {
   display: none;
@@ -397,6 +404,14 @@ input :-ms-input-placeholder {
 
 ol[type=a] {
   margin-top: 25px;
+}
+
+.issn {
+  display: flex;
+  justify-content: space-between;
+}
+.issn > div {
+  width: 50%;
 }
 
 .nav {
@@ -640,6 +655,9 @@ ol[type=a] {
   background-color: #C4E2E2;
 }
 
+.wrapper .issue_detail_page {
+  padding: 80px 0 15px 0 !important;
+}
 .wrapper .page_article {
   padding: 80px 0 90px 0;
   border-bottom: 1px solid #3D3D3D;
@@ -752,10 +770,6 @@ ol[type=a] {
   line-height: 130%;
   text-transform: uppercase;
 }
-.wrapper .page_article .page_description_bottom .views {
-  position: relative;
-  left: 10%;
-}
 .wrapper .main {
   display: flex;
   padding: 0;
@@ -812,6 +826,9 @@ ol[type=a] {
 .wrapper .main .sidebar {
   width: 30%;
   padding-left: 30px;
+  border-left: 1px solid #1F1F1F;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media only screen and (max-width: 425px) {
   .wrapper .main .sidebar {
@@ -829,10 +846,6 @@ ol[type=a] {
 }
 .wrapper .main .sidebar p a {
   text-decoration: underline;
-}
-.wrapper .main .sidebar .issn {
-  display: flex;
-  justify-content: space-between;
 }
 .wrapper .main .sidebar .info_text {
   font-family: "Segoe UI", sans-serif;
@@ -919,18 +932,49 @@ ol[type=a] {
 .wrapper .main .issue_content {
   width: 70%;
   padding-right: 50px;
-  border-right: 1px solid #3D3D3D;
+}
+.wrapper .main .issue_content .issue_author_block {
+  border-bottom: 1px solid #1F1F1F;
+  padding-bottom: 40px;
+}
+.wrapper .main .issue_content .issue_author_block h3 {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+  color: #1F1F1F;
+}
+.wrapper .main .issue_content .key_words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.wrapper .main .issue_content .key_words p {
+  padding: 4px 12px;
+  border: 1px solid #1F1F1F;
+  border-radius: 42px;
+  margin: 0;
+}
+.wrapper .main .issue_content .issue_info_block {
+  border-bottom: 1px solid #1F1F1F;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.wrapper .main .issue_content a {
+  color: #138CD1;
+  text-decoration: underline;
 }
 .wrapper .main .issue_content h4 {
-  margin: 40px 0 20px 0;
+  margin-top: 10px;
   font-size: 20px;
 }
 .wrapper .main .issue_content p {
   font-family: "Segoe UI", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
+  font-size: 18px;
+  line-height: 25.2px;
   color: #1F1F1F;
 }
 .wrapper .main .requirements_content {

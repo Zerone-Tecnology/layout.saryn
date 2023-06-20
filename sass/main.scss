@@ -244,6 +244,9 @@ ol {
     margin-bottom: 30px;
   }
 }
+ol{
+  padding-left: 18px;
+}
 
 h1 {
   font-family: 'CM Literata';
@@ -441,7 +444,7 @@ input {
     margin: 0;
 
     a {
-      color: $primary;
+      color: #A4A4A4;
       font-weight: 400;
       font-size: 16px;
       line-height: 120%;
@@ -454,6 +457,9 @@ input {
     }
 
     &:last-child {
+      a{
+        color: $primary;
+      }
       &::after {
         display: none;
       }
@@ -496,7 +502,13 @@ input {
 ol[type="a"] {
   margin-top: 25px;
 }
-
+.issn {
+  display: flex;
+  justify-content: space-between;
+  &>div{
+    width: 50%;
+  }
+}
 .nav {
   background: #008283;
   margin: 11px 0;
@@ -779,6 +791,9 @@ ol[type="a"] {
 }
 
 .wrapper {
+  .issue_detail_page{
+    padding: 80px 0 15px 0 !important;
+  }
   .page_article {
     padding: 80px 0 90px 0;
     border-bottom: 1px solid #3D3D3D;
@@ -908,11 +923,6 @@ ol[type="a"] {
           text-transform: uppercase;
         }
       }
-
-      .views {
-        position: relative;
-        left: 10%;
-      }
     }
   }
 
@@ -974,6 +984,8 @@ ol[type="a"] {
     .sidebar {
       width: 30%;
       padding-left: 30px;
+      border-left: 1px solid $primary;
+      height: fit-content;
 
       @include respond-to(_425) {
         width: 100%;
@@ -993,10 +1005,10 @@ ol[type="a"] {
         }
       }
 
-      .issn {
-        display: flex;
-        justify-content: space-between;
-      }
+      
+
+
+
 
       .info_text {
         font-family: 'Segoe UI', sans-serif;
@@ -1098,11 +1110,44 @@ ol[type="a"] {
     .issue_content {
       width: 70%;
       padding-right: 50px;
-      border-right: 1px solid #3D3D3D;
+      // border-right: 1px solid #3D3D3D;
+      .issue_author_block{
+        border-bottom: 1px solid $primary;
+        padding-bottom: 40px;
+
+        h3{
+          font-family: 'Segoe UI',sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 130%;
+          color: #1F1F1F;
+        }
+      }
+      .key_words{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        p{
+          padding: 4px 12px;
+          border: 1px solid #1F1F1F;
+          border-radius: 42px;
+          margin: 0;
+        }
+      }
+      .issue_info_block{
+        border-bottom: 1px solid $primary;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+      }
+      a{
+        color: #138CD1;
+        text-decoration: underline;
+      }
 
 
       h4 {
-        margin: 40px 0 20px 0;
+        margin-top: 10px;
         font-size: 20px;
       }
 
@@ -1110,8 +1155,8 @@ ol[type="a"] {
         font-family: 'Segoe UI', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
+        font-size: 18px;
+        line-height: 25.2px;
         color: #1F1F1F;
       }
     }
