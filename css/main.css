@@ -196,7 +196,7 @@ h2 {
   font-family: "Cambria";
   font-style: normal;
   font-weight: 400;
-  font-size: 90px;
+  font-size: 70px;
   line-height: 90%;
   color: #008283;
   margin: 0 0 30px 0;
@@ -866,6 +866,46 @@ ol[type=a] {
     line-height: 130%;
   }
 }
+.wrapper .main .requirements_sidebar {
+  width: 30%;
+}
+.wrapper .main .requirements_sidebar ul {
+  list-style: none;
+  padding-left: 50px;
+  margin: 0;
+}
+.wrapper .main .requirements_sidebar ul li {
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+.wrapper .main .requirements_sidebar ul li a {
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #1F1F1F;
+  opacity: 0.6;
+}
+.wrapper .main .requirements_sidebar ul li a:hover {
+  opacity: 1;
+}
+.wrapper .main .requirements_sidebar ul li.active a {
+  opacity: 1;
+  position: relative;
+}
+.wrapper .main .requirements_sidebar ul li.active a::before {
+  content: "";
+  position: absolute;
+  background: #1F1F1F;
+  border-radius: 2px;
+  width: 30px;
+  height: 2px;
+  right: 100%;
+  top: 42%;
+  margin-right: 20px;
+}
 .wrapper .main .sidebar {
   width: 30%;
   padding-left: 30px;
@@ -1026,7 +1066,11 @@ ol[type=a] {
   width: 70%;
 }
 .wrapper .main .requirements_content h4 {
-  margin-top: 60px;
+  margin-top: 0;
+}
+.wrapper .main .requirements_content a {
+  color: #138CD1;
+  text-decoration: underline;
 }
 .wrapper .main .requirements_content p {
   font-family: "Segoe UI", sans-serif;
