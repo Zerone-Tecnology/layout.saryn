@@ -655,7 +655,7 @@ ol[type=a] {
   background-color: #C4E2E2;
 }
 
-.wrapper .issue_detail_page {
+.wrapper .issue_detail_page, .wrapper .collegiya_page {
   padding: 80px 0 15px 0 !important;
 }
 .wrapper .page_article {
@@ -666,6 +666,38 @@ ol[type=a] {
   .wrapper .page_article {
     padding: 60px 0 70px 0;
   }
+}
+.wrapper .page_article img {
+  max-width: 320px;
+  max-height: 355px;
+  width: 100%;
+  height: 100%;
+}
+.wrapper .page_article.bio_articles {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 90px;
+}
+.wrapper .page_article.bio_articles .bio_articles_right {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+.wrapper .page_article.bio_articles .bio_articles_right h2 {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 90%;
+}
+.wrapper .page_article.bio_articles .bio_articles_right h6 {
+  font-family: "Cambria", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  color: #1F1F1F;
+  opacity: 0.6;
+  margin: 0;
+  margin-bottom: 18%;
 }
 .wrapper .page_article .page_description p {
   font-family: "Segoe UI", sans-serif;
@@ -678,6 +710,10 @@ ol[type=a] {
 .wrapper .page_article .page_description_bottom {
   margin-top: 30px;
   position: relative;
+}
+.wrapper .page_article .page_description_bottom h4 {
+  color: #1F1F1F;
+  opacity: 0.4;
 }
 .wrapper .page_article .page_description_bottom input {
   border-left: 0;
@@ -786,6 +822,9 @@ ol[type=a] {
 .wrapper .main > div {
   margin: 60px 0;
 }
+.wrapper .main .collegiya_detail_content {
+  width: 70%;
+}
 .wrapper .main .content {
   width: 70%;
   padding-right: 50px;
@@ -870,6 +909,8 @@ ol[type=a] {
 }
 .wrapper .main .sidebar .issue_img {
   margin-bottom: 30px;
+  max-width: 240px;
+  max-height: 340px;
 }
 .wrapper .main .archive_content {
   width: 100%;
@@ -1010,6 +1051,7 @@ ol[type=a] {
   border: 1px solid #1F1F1F;
   padding: 60px;
   max-width: 760px;
+  width: 100%;
 }
 .wrapper .main .auth_content .auth_block > p {
   text-align: center;
@@ -1025,14 +1067,18 @@ ol[type=a] {
 }
 .wrapper .main .auth_content h4 {
   text-align: center;
+  margin-top: 0;
 }
 .wrapper .main .auth_content .checkbox {
   display: flex;
   align-items: center;
+  gap: 0 15px;
 }
 .wrapper .main .auth_content .checkbox input {
-  width: auto;
-  margin: 0 15px 0 0;
+  zoom: 2;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
 }
 .wrapper .main .auth_content .required_input {
   font-family: "Segoe UI", sans-serif;
@@ -1040,9 +1086,9 @@ ol[type=a] {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  text-align: right;
   color: #1F1F1F;
   opacity: 0.6;
+  text-align: right !important;
 }
 .wrapper .main .auth_content input {
   width: 100%;
@@ -1065,6 +1111,13 @@ ol[type=a] {
   justify-content: space-between;
   margin-top: 40px;
 }
+.wrapper .main .auth_content .sign_in_btn a {
+  color: #1F1F1F;
+  opacity: 0.6;
+}
+.wrapper .main .auth_content .sign_in_btn a:hover {
+  opacity: 1;
+}
 .wrapper .main .collegiya {
   width: 100%;
   margin: 0;
@@ -1076,14 +1129,23 @@ ol[type=a] {
   border-bottom: 1px solid #3D3D3D;
   align-items: flex-start;
   position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
 }
-.wrapper .main .collegiya .block_collegiya > a {
+.wrapper .main .collegiya .block_collegiya:hover {
+  background: #E0E0E0;
+  transition: all 0.4s ease;
+}
+.wrapper .main .collegiya .block_collegiya > button {
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
   color: #1F1F1F;
+  background: transparent;
+  border: 0;
+  text-align: left;
 }
-.wrapper .main .collegiya .block_collegiya > a,
+.wrapper .main .collegiya .block_collegiya > button,
 .wrapper .main .collegiya .block_collegiya p {
   width: 50%;
 }

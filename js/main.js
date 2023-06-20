@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             archive_select[i].classList.toggle("active");
         }
     }
-    let collegiya_popup_btn = document.getElementsByClassName("collegiya_popup_btn");
+    let collegiya_popup_btn = document.getElementsByClassName("block_collegiya");
     let collegiya_popup = document.getElementsByClassName("collegiya_popup");
     for (let i = 0; i < collegiya_popup_btn.length; i++) {
         collegiya_popup_btn[i].onclick = function () {
