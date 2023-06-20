@@ -449,6 +449,10 @@ ol[type=a] {
   margin: 0;
   transition: all 0.4s ease;
   position: relative;
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav .menu li.dropdown_menu::after {
   content: url("../img/menu_vectore.png");
