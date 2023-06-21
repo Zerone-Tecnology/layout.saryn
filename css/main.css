@@ -311,6 +311,10 @@ input :-ms-input-placeholder {
   line-height: 120%;
   color: #FFFFFF;
 }
+.default_btn:hover {
+  opacity: 1;
+  color: #fff;
+}
 
 .go_back_btn {
   display: flex;

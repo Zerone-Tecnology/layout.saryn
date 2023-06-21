@@ -396,6 +396,10 @@ input {
   font-size: 18px;
   line-height: 120%;
   color: #FFFFFF;
+  &:hover{
+    opacity: 1;
+    color: #fff;
+  }
 }
 
 .go_back_btn {
@@ -1435,7 +1439,6 @@ ol[type="a"] {
 
       .default_btn {
         position: relative;
-
         &::after {
           content: "";
           width: 100%;
