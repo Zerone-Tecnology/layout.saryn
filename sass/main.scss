@@ -1387,7 +1387,22 @@ ol[type="a"] {
           text-align: center;
         }
       }
-
+      .auth_correct{
+        h6{
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 120%;
+          opacity: 1;
+          text-align: center;
+        }
+        .sign_in_btn{
+          justify-content: center;
+          a{
+            opacity: 1;
+            text-align: center;
+          }
+        }
+      }
       .auth_block_2 {
         .input_row {
           display: flex;

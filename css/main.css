@@ -1156,6 +1156,20 @@ ol[type=a] {
 .wrapper .main .auth_content .auth_block > p {
   text-align: center;
 }
+.wrapper .main .auth_content .auth_correct h6 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 120%;
+  opacity: 1;
+  text-align: center;
+}
+.wrapper .main .auth_content .auth_correct .sign_in_btn {
+  justify-content: center;
+}
+.wrapper .main .auth_content .auth_correct .sign_in_btn a {
+  opacity: 1;
+  text-align: center;
+}
 .wrapper .main .auth_content .auth_block_2 .input_row {
   display: flex;
 }
