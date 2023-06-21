@@ -321,6 +321,13 @@ input :-ms-input-placeholder {
   margin-right: 13px;
 }
 
+.attention {
+  color: #D34747;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 .networks {
   display: flex;
   justify-content: flex-start;
@@ -815,6 +822,9 @@ ol[type=a] {
   padding: 0;
   border-bottom: 1px solid #3D3D3D;
 }
+.wrapper .main.manuscript_requirements {
+  justify-content: flex-end;
+}
 .wrapper .main.archive_page {
   border: 0;
 }
@@ -1101,6 +1111,14 @@ ol[type=a] {
   max-width: 760px;
   width: 100%;
 }
+.wrapper .main .auth_content .auth_block .required_text {
+  color: #0DB45A;
+  text-align: left;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+}
 .wrapper .main .auth_content .auth_block > p {
   text-align: center;
 }
@@ -1140,7 +1158,7 @@ ol[type=a] {
 }
 .wrapper .main .auth_content input {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .wrapper .main .auth_content .default_btn {
   position: relative;

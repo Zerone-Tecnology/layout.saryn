@@ -406,7 +406,12 @@ input {
     margin-right: 13px;
   }
 }
-
+.attention{
+  color: #D34747;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}
 .networks {
   display: flex;
   justify-content: flex-start;
@@ -970,6 +975,9 @@ ol[type="a"] {
     display: flex;
     padding: 0;
     border-bottom: 1px solid #3D3D3D;
+    &.manuscript_requirements{
+      justify-content: flex-end;
+    }
     &.archive_page{
       border: 0;
     }
@@ -1286,7 +1294,14 @@ ol[type="a"] {
         padding: 60px;
         max-width: 760px;
         width: 100%;
-
+        .required_text{
+          color: #0DB45A;
+          text-align: left;
+          margin: 0;
+          font-weight: 400;
+          font-size: 16px;  
+          line-height: 120%;
+        }
         &>p {
           text-align: center;
         }
@@ -1338,7 +1353,7 @@ ol[type="a"] {
 
       input {
         width: 100%;
-        margin-bottom: 20px;
+        margin-top: 20px;
       }
 
       .default_btn {
