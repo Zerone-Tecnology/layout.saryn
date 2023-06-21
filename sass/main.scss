@@ -1371,6 +1371,13 @@ ol[type="a"] {
           font-size: 16px;
           line-height: 120%;
         }
+        .result_error{
+          color: #D34747;
+          text-align: left;
+        }
+        .result_error_input{
+          border: 1px solid #D34747;
+        }
 
         &>p {
           text-align: center;

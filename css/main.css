@@ -1142,6 +1142,13 @@ ol[type=a] {
   font-size: 16px;
   line-height: 120%;
 }
+.wrapper .main .auth_content .auth_block .result_error {
+  color: #D34747;
+  text-align: left;
+}
+.wrapper .main .auth_content .auth_block .result_error_input {
+  border: 1px solid #D34747;
+}
 .wrapper .main .auth_content .auth_block > p {
   text-align: center;
 }

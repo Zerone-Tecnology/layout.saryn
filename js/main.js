@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    
+    var phoneMask = IMask(
+        document.getElementById('phone-mask'), {
+          mask: '+{7}(000)000-00-00'
+        });
+        
     let collegiya_popup_btn = document.getElementsByClassName("block_collegiya");
     let collegiya_popup = document.getElementsByClassName("collegiya_popup");
     for (let i = 0; i < collegiya_popup_btn.length; i++) {
