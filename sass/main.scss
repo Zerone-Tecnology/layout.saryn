@@ -978,6 +978,19 @@ ol[type="a"] {
     &.manuscript_requirements{
       justify-content: flex-end;
     }
+    &.formating_rules{
+      width: 100%;
+    }
+    .rules_block{
+      display: flex;
+      justify-content: space-between;
+      .rules_block_right{
+        width: 70%;
+      }
+      .rules_block_left{
+        width: 30%;
+      }
+    }
     &.archive_page{
       border: 0;
     }

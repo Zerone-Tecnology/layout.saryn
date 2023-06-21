@@ -825,6 +825,19 @@ ol[type=a] {
 .wrapper .main.manuscript_requirements {
   justify-content: flex-end;
 }
+.wrapper .main.formating_rules {
+  width: 100%;
+}
+.wrapper .main .rules_block {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .main .rules_block .rules_block_right {
+  width: 70%;
+}
+.wrapper .main .rules_block .rules_block_left {
+  width: 30%;
+}
 .wrapper .main.archive_page {
   border: 0;
 }
