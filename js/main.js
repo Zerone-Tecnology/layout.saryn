@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    let archive_select = document.querySelectorAll(".archive_select li");
-    for (let i = 0; i < archive_select.length; i++) {
-        archive_select[i].onclick = function () {
-            archive_select[i].classList.toggle("active");
-        }
-    }
+    
     let collegiya_popup_btn = document.getElementsByClassName("block_collegiya");
     let collegiya_popup = document.getElementsByClassName("collegiya_popup");
     for (let i = 0; i < collegiya_popup_btn.length; i++) {
