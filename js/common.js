@@ -41,33 +41,36 @@ $(function() {
 });
 
 $(window).load(function() {
+	$( document ).ready(function() {
 
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
+		$(".loader_inner").fadeOut();
+		$(".loader").delay(400).fadeOut("slow");
+	
+		$("#burger_menu").on("click", function(){
+			$("#burger_menu").toggleClass("active");
+			$("#nav").fadeToggle("slow");
+			$("#mobile_search").toggleClass("active");
+			$(".header_auth").toggleClass("active");
+			$(".header_language").toggleClass("active");
+			$(".header").toggleClass("active");
+		});
+		$(".search_btn").on("click", function(){
+			$(".search_input").fadeIn("slow");
+			$(".search_btn_close").fadeIn("slow");
+			$(".search_btn").attr("type","submit");
+		});
+		$(".search_btn_close").on("click", function(){
+			$(".search_input").fadeOut("slow");
+			$(".search_btn_close").fadeOut("slow");
+			$(".search_btn").removeAttr("type","submit");
+	
+		});
+	
+		$(".archive_select li").on("click", function(){
+			$(this).toggleClass("active");
+		});
+	});
 
-	$("#burger_menu").on("click", function(){
-		$("#burger_menu").toggleClass("active");
-		$("#nav").fadeToggle("slow");
-		$("#mobile_search").toggleClass("active");
-		$(".header_auth").toggleClass("active");
-		$(".header_language").toggleClass("active");
-		$(".header").toggleClass("active");
-	});
-	$(".search_btn").on("click", function(){
-		$(".search_input").fadeIn("slow");
-		$(".search_btn_close").fadeIn("slow");
-		$(".search_btn").attr("type","submit");
-	});
-	$(".search_btn_close").on("click", function(){
-		$(".search_input").fadeOut("slow");
-		$(".search_btn_close").fadeOut("slow");
-		$(".search_btn").removeAttr("type","submit");
-
-	});
-
-	$(".archive_select li").on("click", function(){
-		$(this).toggleClass("active");
-	});
 
 	// let archive_select = document.querySelectorAll(".archive_select li");
     // for (let i = 0; i < archive_select.length; i++) {
