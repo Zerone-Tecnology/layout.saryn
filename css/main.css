@@ -666,11 +666,23 @@ ol[type=a] {
   background-color: #C4E2E2;
 }
 
-.wrapper .issue_detail_page, .wrapper .collegiya_page {
+.rules_block {
+  display: flex;
+  justify-content: space-between;
+}
+.rules_block .rules_block_right {
+  width: 70%;
+}
+.rules_block .rules_block_left {
+  width: 30%;
+}
+
+.wrapper .issue_detail_page,
+.wrapper .collegiya_page {
   padding: 80px 0 15px 0 !important;
 }
 .wrapper .page_article {
-  padding: 80px 0 90px 0;
+  padding: 80px 0 40px 0;
   border-bottom: 1px solid #3D3D3D;
 }
 @media only screen and (max-width: 1024px) {
@@ -721,6 +733,12 @@ ol[type=a] {
 .wrapper .page_article .page_description_bottom {
   margin-top: 30px;
   position: relative;
+}
+.wrapper .page_article .page_description_bottom.formating_rules {
+  border-top: 1px solid #1F1F1F;
+}
+.wrapper .page_article .page_description_bottom.formating_rules h4 {
+  opacity: 1;
 }
 .wrapper .page_article .page_description_bottom h4 {
   color: #1F1F1F;
@@ -825,18 +843,11 @@ ol[type=a] {
 .wrapper .main.manuscript_requirements {
   justify-content: flex-end;
 }
-.wrapper .main.formating_rules {
+.wrapper .main .formating_rules {
   width: 100%;
 }
-.wrapper .main .rules_block {
-  display: flex;
-  justify-content: space-between;
-}
-.wrapper .main .rules_block .rules_block_right {
-  width: 70%;
-}
-.wrapper .main .rules_block .rules_block_left {
-  width: 30%;
+.wrapper .main .formating_rules a {
+  color: #138CD1;
 }
 .wrapper .main.archive_page {
   border: 0;
