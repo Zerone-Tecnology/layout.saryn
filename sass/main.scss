@@ -1646,7 +1646,7 @@ ol[type="a"] {
           transition: all .4s ease;
         }
 
-        &>button {
+        &>a {
           font-weight: 600;
           font-size: 20px;
           line-height: 26px;
@@ -1656,7 +1656,7 @@ ol[type="a"] {
           text-align: left;
         }
 
-        &>button,
+        &>a,
         p {
           width: 50%;
           @include respond-to(_425){

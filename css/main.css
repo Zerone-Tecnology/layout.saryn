@@ -1469,7 +1469,7 @@ ol[type=a] {
   background: #E0E0E0;
   transition: all 0.4s ease;
 }
-.wrapper .main .collegiya .block_collegiya > button {
+.wrapper .main .collegiya .block_collegiya > a {
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
@@ -1478,12 +1478,12 @@ ol[type=a] {
   border: 0;
   text-align: left;
 }
-.wrapper .main .collegiya .block_collegiya > button,
+.wrapper .main .collegiya .block_collegiya > a,
 .wrapper .main .collegiya .block_collegiya p {
   width: 50%;
 }
 @media only screen and (max-width: 425px) {
-  .wrapper .main .collegiya .block_collegiya > button,
+  .wrapper .main .collegiya .block_collegiya > a,
   .wrapper .main .collegiya .block_collegiya p {
     width: 100%;
   }
