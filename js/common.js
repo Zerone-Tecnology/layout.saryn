@@ -69,7 +69,9 @@ $(window).load(function() {
 		$(".archive_select li").on("click", function(){
 			$(this).toggleClass("active");
 		});
-		
+		$(".logged_in_dropdown_btn").on("click",function(){
+			$(".logged_in_dropdown").fadeToggle("slow");
+		});
 	});    
 });
 
