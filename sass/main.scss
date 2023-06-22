@@ -533,7 +533,9 @@ input {
     }
   }
 }
-
+button{
+  padding: 0;
+}
 .pages_btns {
   list-style: none;
   display: flex;
@@ -1608,6 +1610,11 @@ ol[type="a"] {
         position: relative;
         cursor: pointer;
         transition: all .4s ease;
+        @include respond-to(_425){
+          flex-direction: column;
+          padding: 18px 0;
+          gap: 8px 0;
+        }
 
         &:hover {
           background: #E0E0E0;
@@ -1627,6 +1634,9 @@ ol[type="a"] {
         &>button,
         p {
           width: 50%;
+          @include respond-to(_425){
+            width: 100%;
+          }
         }
 
         p {

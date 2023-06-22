@@ -462,6 +462,10 @@ input :-ms-input-placeholder {
   display: none;
 }
 
+button {
+  padding: 0;
+}
+
 .pages_btns {
   list-style: none;
   display: flex;
@@ -1420,6 +1424,13 @@ ol[type=a] {
   cursor: pointer;
   transition: all 0.4s ease;
 }
+@media only screen and (max-width: 425px) {
+  .wrapper .main .collegiya .block_collegiya {
+    flex-direction: column;
+    padding: 18px 0;
+    gap: 8px 0;
+  }
+}
 .wrapper .main .collegiya .block_collegiya:hover {
   background: #E0E0E0;
   transition: all 0.4s ease;
@@ -1436,6 +1447,12 @@ ol[type=a] {
 .wrapper .main .collegiya .block_collegiya > button,
 .wrapper .main .collegiya .block_collegiya p {
   width: 50%;
+}
+@media only screen and (max-width: 425px) {
+  .wrapper .main .collegiya .block_collegiya > button,
+  .wrapper .main .collegiya .block_collegiya p {
+    width: 100%;
+  }
 }
 .wrapper .main .collegiya .block_collegiya p {
   margin: 0;
