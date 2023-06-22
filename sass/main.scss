@@ -198,6 +198,11 @@ a {
     transition: all .3s ease;
     text-decoration: none;
   }
+  @include respond-to(_425){
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+  }
 }
 
 .issue_block {
@@ -246,6 +251,17 @@ ol {
 
   li {
     margin-bottom: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #1F1F1F;
+    @include respond-to(_425){
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+    }
   }
 }
 
@@ -452,11 +468,19 @@ input {
 
   a {
     margin: 0 14px;
+    @include respond-to(_320){
+      margin: 0 7px;
+    }
 
     img {
       max-width: 21px;
       max-height: 21px;
     }
+  }
+  p{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
   }
 }
 
@@ -475,12 +499,21 @@ input {
     line-height: 120%;
     color: #A4A4A4;
     margin: 0;
-
+    @include respond-to(_425){
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 110%;
+    }
     a {
       color: #A4A4A4;
       font-weight: 400;
       font-size: 16px;
       line-height: 120%;
+      @include respond-to(_425){
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 110%;
+      }
     }
 
     &::after {
@@ -543,6 +576,9 @@ ol[type="a"] {
 
   &>div {
     width: 50%;
+  }
+  @include respond-to(_425){
+    flex-direction: column-reverse;
   }
 }
 
@@ -699,6 +735,11 @@ ol[type="a"] {
   color: #1F1F1F;
   opacity: 0.6;
   margin: 0;
+  @include respond-to(_768){
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 120%;
+  }
 }
 
 .header {
@@ -944,6 +985,11 @@ ol[type="a"] {
       &.issue_info {
         display: flex;
         justify-content: space-between;
+        .views{
+          font-weight: 400;
+          font-size: 11px;
+          line-height: 120%;
+        }
       }
 
       .search_btn_close {
@@ -1319,9 +1365,10 @@ ol[type="a"] {
     .issue_content {
       width: 70%;
       padding-right: 50px;
-      @include respond-to(_786){
+      @include respond-to(_768){
         width: 100%;
         padding: 0;
+        border-bottom: 1px solid $primary;
       }
       .issue_author_block {
         border-bottom: 1px solid $primary;
@@ -1334,6 +1381,11 @@ ol[type="a"] {
           font-size: 25px;
           line-height: 130%;
           color: #1F1F1F;
+          @include respond-to(_425){
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 120%;
+          }
         }
       }
 
@@ -1377,6 +1429,11 @@ ol[type="a"] {
         font-size: 18px;
         line-height: 25.2px;
         color: #1F1F1F;
+        @include respond-to(_425){
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+        }
       }
     }
 
