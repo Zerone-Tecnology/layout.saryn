@@ -1232,6 +1232,12 @@ ol[type="a"] {
         padding: 30px 20px;
         position: relative;
         list-style: none;
+        @include respond-to(_768){
+          padding: 30px 0;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 100%;
+        }
 
         li {
           cursor: pointer;
@@ -1256,15 +1262,26 @@ ol[type="a"] {
             &>li {
               width: 25%;
               margin-bottom: 40px;
+              @include respond-to(_768){
+                width: 50%;
+              }
 
               a {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
                 align-items: center;
+                @include respond-to(_425){
+                  font-weight: 600;
+                  font-size: 15px;
+                  line-height: 120%;
+                }
 
                 img {
                   max-width: 220px;
+                  @include respond-to(_425){
+                    max-width: 125px;
+                  }
                 }
               }
             }

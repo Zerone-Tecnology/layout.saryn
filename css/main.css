@@ -1047,6 +1047,14 @@ ol[type=a] {
   position: relative;
   list-style: none;
 }
+@media only screen and (max-width: 768px) {
+  .wrapper .main .archive_content .archive_select {
+    padding: 30px 0;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+  }
+}
 .wrapper .main .archive_content .archive_select li {
   cursor: pointer;
   position: relative;
@@ -1069,14 +1077,31 @@ ol[type=a] {
   width: 25%;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 768px) {
+  .wrapper .main .archive_content .archive_select li ul > li {
+    width: 50%;
+  }
+}
 .wrapper .main .archive_content .archive_select li ul > li a {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
 }
+@media only screen and (max-width: 425px) {
+  .wrapper .main .archive_content .archive_select li ul > li a {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 120%;
+  }
+}
 .wrapper .main .archive_content .archive_select li ul > li a img {
   max-width: 220px;
+}
+@media only screen and (max-width: 425px) {
+  .wrapper .main .archive_content .archive_select li ul > li a img {
+    max-width: 125px;
+  }
 }
 .wrapper .main .archive_content .archive_select > li::after {
   content: url("../img/archive_dropdown.png");
