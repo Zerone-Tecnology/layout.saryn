@@ -338,6 +338,11 @@ h5 {
   color: #1F1F1F;
   opacity: 0.4;
   margin-top: 0;
+  @include respond-to(_425){
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+  }
 }
 
 p {
@@ -1035,7 +1040,20 @@ ol[type="a"] {
       }
     }
   }
-
+  .issue_page{
+    @include respond-to(_768){
+      flex-direction: column-reverse !important;
+      border-bottom: 0 !important;
+      .sidebar{
+        border-bottom: 1px solid $primary !important;
+      }
+      .issue_content{
+        width: 100% !important;
+        padding: 0 !important;
+        margin-top: 0;
+      }
+    }
+  }
   .main {
     display: flex;
     padding: 0;
@@ -1056,7 +1074,7 @@ ol[type="a"] {
       border: 0;
     }
 
-    @include respond-to(_425) {
+    @include respond-to(_768) {
       flex-direction: column;
     }
 
@@ -1071,15 +1089,13 @@ ol[type="a"] {
     .content {
       width: 70%;
       padding-right: 50px;
-      // border-right: 1px solid #3D3D3D;
 
-      @include respond-to(_425) {
+      @include respond-to(_768) {
         border: 0;
         width: 100%;
         border-bottom: 1px solid #3D3D3D;
         padding: 0 0 40px 0;
         margin-bottom: 0;
-
       }
 
       .main_content {
@@ -1104,8 +1120,6 @@ ol[type="a"] {
           }
         }
       }
-
-
     }
 
     .requirements_sidebar {
@@ -1163,7 +1177,7 @@ ol[type="a"] {
       border-left: 1px solid $primary;
       height: fit-content;
 
-      @include respond-to(_425) {
+      @include respond-to(_768) {
         width: 100%;
         padding: 0;
         border: 0;
@@ -1181,11 +1195,6 @@ ol[type="a"] {
           text-decoration: underline;
         }
       }
-
-
-
-
-
 
       .info_text {
         font-family: 'Segoe UI', sans-serif;
@@ -1310,8 +1319,10 @@ ol[type="a"] {
     .issue_content {
       width: 70%;
       padding-right: 50px;
-
-      // border-right: 1px solid #3D3D3D;
+      @include respond-to(_786){
+        width: 100%;
+        padding: 0;
+      }
       .issue_author_block {
         border-bottom: 1px solid $primary;
         padding-bottom: 40px;
@@ -1352,6 +1363,11 @@ ol[type="a"] {
       h4 {
         margin-top: 10px;
         font-size: 20px;
+        @include respond-to(_425){
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 120%;
+        }
       }
 
       p {

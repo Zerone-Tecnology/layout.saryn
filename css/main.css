@@ -271,6 +271,13 @@ h5 {
   opacity: 0.4;
   margin-top: 0;
 }
+@media only screen and (max-width: 425px) {
+  h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+  }
+}
 
 p {
   font-family: "Segoe UI", sans-serif;
@@ -877,6 +884,20 @@ ol[type=a] {
   line-height: 130%;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 768px) {
+  .wrapper .issue_page {
+    flex-direction: column-reverse !important;
+    border-bottom: 0 !important;
+  }
+  .wrapper .issue_page .sidebar {
+    border-bottom: 1px solid #1F1F1F !important;
+  }
+  .wrapper .issue_page .issue_content {
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: 0;
+  }
+}
 .wrapper .main {
   display: flex;
   padding: 0;
@@ -894,7 +915,7 @@ ol[type=a] {
 .wrapper .main.archive_page {
   border: 0;
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
   .wrapper .main {
     flex-direction: column;
   }
@@ -909,7 +930,7 @@ ol[type=a] {
   width: 70%;
   padding-right: 50px;
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
   .wrapper .main .content {
     border: 0;
     width: 100%;
@@ -988,7 +1009,7 @@ ol[type=a] {
   height: -moz-fit-content;
   height: fit-content;
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
   .wrapper .main .sidebar {
     width: 100%;
     padding: 0;
@@ -1153,6 +1174,13 @@ ol[type=a] {
 .wrapper .main .issue_content h4 {
   margin-top: 10px;
   font-size: 20px;
+}
+@media only screen and (max-width: 425px) {
+  .wrapper .main .issue_content h4 {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 120%;
+  }
 }
 .wrapper .main .issue_content p {
   font-family: "Segoe UI", sans-serif;
