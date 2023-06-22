@@ -226,8 +226,12 @@ a {
     text-transform: uppercase;
     color: #1F1F1F;
     opacity: 0.8;
-    margin: 0;
-
+    margin: 0;  
+    @include respond-to(_425){
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+    }
   }
 }
 
@@ -279,6 +283,14 @@ h2 {
   line-height: 90%;
   color: #008283;
   margin: 0 0 30px 0;
+  @include respond-to(_425){
+    font-size: 35px;
+  }
+  @include respond-to(_375){
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+  }
 }
 
 h3 {
@@ -310,7 +322,11 @@ h4 {
   font-size: 25px;
   line-height: 140%;
   color: #1F1F1F;
-
+  @include respond-to(_425){
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 120%;
+  }
 }
 
 h5 {
@@ -913,6 +929,11 @@ ol[type="a"] {
         font-weight: 600;
         font-size: 20px;
         line-height: 130%;
+        @include respond-to(_375){
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 120%;
+        }
       }
 
       &.issue_info {
@@ -931,6 +952,9 @@ ol[type="a"] {
         padding: 0;
         right: 0;
         top: 0;
+        @include respond-to(_375){
+          margin-top: 24px;
+        }
 
         span {
           transform: scale(0);
@@ -975,10 +999,6 @@ ol[type="a"] {
       }
 
       .search_btn {
-        @include respond-to(_1024) {
-          display: none;
-        }
-
         padding: 11px;
         border: 1px solid #1F1F1F;
         border-radius: 50%;
@@ -991,6 +1011,9 @@ ol[type="a"] {
         right: 5%;
         top: 0;
         margin-top: 20px;
+        @include respond-to(_375){
+          margin-top: 14px;
+        }
 
         img {
           width: 18px;
@@ -1048,7 +1071,7 @@ ol[type="a"] {
     .content {
       width: 70%;
       padding-right: 50px;
-      border-right: 1px solid #3D3D3D;
+      // border-right: 1px solid #3D3D3D;
 
       @include respond-to(_425) {
         border: 0;
@@ -1143,6 +1166,7 @@ ol[type="a"] {
       @include respond-to(_425) {
         width: 100%;
         padding: 0;
+        border: 0;
       }
 
       p {
@@ -1597,6 +1621,9 @@ ol[type="a"] {
 
     .search_content {
       width: 70%;
+      @include respond-to(_768){
+        width: 100%;
+      }
 
       .filter {
         display: flex;
@@ -1606,12 +1633,9 @@ ol[type="a"] {
         .filter_right {
           display: flex;
           gap: 20px;
-        }
-
-        .filter_left {
-          // &::after{
-          //   content: ;
-          // }
+          @include respond-to(_375){
+            gap: 5px;
+          }
         }
 
         select {
@@ -1626,6 +1650,12 @@ ol[type="a"] {
           margin-top: 20px;
           cursor: pointer;
           outline: none;
+          @include respond-to(_425){
+            padding: 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+          }
         }
       }
     }
