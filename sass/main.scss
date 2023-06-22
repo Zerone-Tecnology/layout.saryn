@@ -917,16 +917,38 @@ ol[type="a"] {
       display: flex;
       justify-content: space-between;
       gap: 0 90px;
+      @include respond-to(_768){
+        flex-direction: column-reverse;
+        gap: 20px 0;
+
+        img{
+          max-width: 300px;
+          max-height: 332px;
+          width: 100%;
+          height: 100%;
+        }
+      }
 
       .bio_articles_right {
         display: flex;
         flex-direction: column;
         width: 65%;
+        @include respond-to(_768){
+          width: 100%;
+        }
 
         h2 {
           font-weight: 400;
           font-size: 70px;
           line-height: 90%;
+          @include respond-to(_425){
+            font-size: 50px;
+          }
+          @include respond-to(_375){
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 100%;
+          }
         }
 
         h6 {
@@ -1132,6 +1154,9 @@ ol[type="a"] {
 
     .collegiya_detail_content {
       width: 70%;
+      @include respond-to(_425){
+        width: 100%;
+      }
     }
 
     .content {
