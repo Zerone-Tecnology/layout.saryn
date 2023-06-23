@@ -198,7 +198,8 @@ a {
     transition: all .3s ease;
     text-decoration: none;
   }
-  @include respond-to(_425){
+
+  @include respond-to(_425) {
     font-weight: 400;
     font-size: 14px;
     line-height: 120%;
@@ -231,8 +232,9 @@ a {
     text-transform: uppercase;
     color: #1F1F1F;
     opacity: 0.8;
-    margin: 0;  
-    @include respond-to(_425){
+    margin: 0;
+
+    @include respond-to(_425) {
       font-weight: 400;
       font-size: 14px;
       line-height: 120%;
@@ -257,7 +259,8 @@ ol {
     font-size: 18px;
     line-height: 140%;
     color: #1F1F1F;
-    @include respond-to(_425){
+
+    @include respond-to(_425) {
       font-weight: 400;
       font-size: 14px;
       line-height: 120%;
@@ -299,10 +302,12 @@ h2 {
   line-height: 90%;
   color: #008283;
   margin: 0 0 30px 0;
-  @include respond-to(_425){
+
+  @include respond-to(_425) {
     font-size: 35px;
   }
-  @include respond-to(_375){
+
+  @include respond-to(_375) {
     font-weight: 400;
     font-size: 28px;
     line-height: 100%;
@@ -338,7 +343,8 @@ h4 {
   font-size: 25px;
   line-height: 140%;
   color: #1F1F1F;
-  @include respond-to(_425){
+
+  @include respond-to(_425) {
     font-weight: 600;
     font-size: 17px;
     line-height: 120%;
@@ -354,7 +360,8 @@ h5 {
   color: #1F1F1F;
   opacity: 0.4;
   margin-top: 0;
-  @include respond-to(_425){
+
+  @include respond-to(_425) {
     font-weight: 600;
     font-size: 20px;
     line-height: 110%;
@@ -433,7 +440,8 @@ input {
   font-size: 18px;
   line-height: 120%;
   color: #FFFFFF;
-  &:hover{
+
+  &:hover {
     opacity: 1;
     color: #fff;
   }
@@ -468,7 +476,8 @@ input {
 
   a {
     margin: 0 14px;
-    @include respond-to(_320){
+
+    @include respond-to(_320) {
       margin: 0 7px;
     }
 
@@ -477,7 +486,8 @@ input {
       max-height: 21px;
     }
   }
-  p{
+
+  p {
     font-weight: 400;
     font-size: 11px;
     line-height: 120%;
@@ -499,17 +509,20 @@ input {
     line-height: 120%;
     color: #A4A4A4;
     margin: 0;
-    @include respond-to(_425){
+
+    @include respond-to(_425) {
       font-weight: 400;
       font-size: 11px;
       line-height: 110%;
     }
+
     a {
       color: #A4A4A4;
       font-weight: 400;
       font-size: 16px;
       line-height: 120%;
-      @include respond-to(_425){
+
+      @include respond-to(_425) {
         font-weight: 400;
         font-size: 11px;
         line-height: 110%;
@@ -533,9 +546,11 @@ input {
     }
   }
 }
-button{
+
+button {
   padding: 0;
 }
+
 .pages_btns {
   list-style: none;
   display: flex;
@@ -579,7 +594,8 @@ ol[type="a"] {
   &>div {
     width: 50%;
   }
-  @include respond-to(_425){
+
+  @include respond-to(_425) {
     flex-direction: column-reverse;
   }
 }
@@ -738,7 +754,8 @@ ol[type="a"] {
   color: #1F1F1F;
   opacity: 0.6;
   margin: 0;
-  @include respond-to(_768){
+
+  @include respond-to(_768) {
     font-weight: 400;
     font-size: 11px;
     line-height: 120%;
@@ -867,43 +884,53 @@ ol[type="a"] {
           }
         }
       }
-      &.logged_in{
-        display: flex;
-        align-items: center;
-        position: relative;
-        a{
-          border: 0;
-          width: 100%;
-          height: 100%;
-          display: block;
-        } 
-        .logged_in_dropdown{
-          display: none;
-          position: absolute;
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          background: #F6F6F6;
-          z-index: 99;
-          right: 0;
-          top: 100%;
-          border: 1px solid $primary;
-          li{
-            padding: 20px;
+
+      &.logged_in {
+        ul {
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          a {
+            border: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+
+          .logged_in_dropdown {
+            display: none;
+            position: absolute;
+            list-style: none;
+            padding: 0;
             margin: 0;
-            a{
-              padding: 0;
-            }
-            &:hover{
-              background-color: #E0E0E0;
-              cursor: pointer;
-              a{
-                background: none;
+            background: #F6F6F6;
+            z-index: 99;
+            right: 0;
+            top: 100%;
+            border: 1px solid $primary;
+
+            li {
+              padding: 20px;
+              margin: 0;
+
+              a {
+                padding: 0;
+              }
+
+              &:hover {
+                background-color: #E0E0E0;
+                cursor: pointer;
+
+                a {
+                  background: none;
+                }
               }
             }
           }
         }
       }
+
       a {
         padding: 5px 6px;
         border: 1px solid $primary;
@@ -916,6 +943,7 @@ ol[type="a"] {
     }
   }
 }
+
 .rules_block {
   display: flex;
   justify-content: space-between;
@@ -928,6 +956,7 @@ ol[type="a"] {
     width: 30%;
   }
 }
+
 .wrapper {
 
   .issue_detail_page,
@@ -954,11 +983,12 @@ ol[type="a"] {
       display: flex;
       justify-content: space-between;
       gap: 0 90px;
-      @include respond-to(_768){
+
+      @include respond-to(_768) {
         flex-direction: column-reverse;
         gap: 20px 0;
 
-        img{
+        img {
           max-width: 300px;
           max-height: 332px;
           width: 100%;
@@ -970,7 +1000,8 @@ ol[type="a"] {
         display: flex;
         flex-direction: column;
         width: 65%;
-        @include respond-to(_768){
+
+        @include respond-to(_768) {
           width: 100%;
         }
 
@@ -978,10 +1009,12 @@ ol[type="a"] {
           font-weight: 400;
           font-size: 70px;
           line-height: 90%;
-          @include respond-to(_425){
+
+          @include respond-to(_425) {
             font-size: 50px;
           }
-          @include respond-to(_375){
+
+          @include respond-to(_375) {
             font-weight: 400;
             font-size: 28px;
             line-height: 100%;
@@ -1016,12 +1049,15 @@ ol[type="a"] {
     .page_description_bottom {
       margin-top: 30px;
       position: relative;
-      &.formating_rules{
-        border-top: 1px solid $primary; 
-        h4{
+
+      &.formating_rules {
+        border-top: 1px solid $primary;
+
+        h4 {
           opacity: 1;
         }
       }
+
       h4 {
         color: #1F1F1F;
         opacity: 0.4;
@@ -1036,7 +1072,8 @@ ol[type="a"] {
         font-weight: 600;
         font-size: 20px;
         line-height: 130%;
-        @include respond-to(_375){
+
+        @include respond-to(_375) {
           font-weight: 600;
           font-size: 17px;
           line-height: 120%;
@@ -1046,7 +1083,8 @@ ol[type="a"] {
       &.issue_info {
         display: flex;
         justify-content: space-between;
-        .views{
+
+        .views {
           font-weight: 400;
           font-size: 11px;
           line-height: 120%;
@@ -1064,7 +1102,8 @@ ol[type="a"] {
         padding: 0;
         right: 0;
         top: 0;
-        @include respond-to(_375){
+
+        @include respond-to(_375) {
           margin-top: 24px;
         }
 
@@ -1123,7 +1162,8 @@ ol[type="a"] {
         right: 5%;
         top: 0;
         margin-top: 20px;
-        @include respond-to(_375){
+
+        @include respond-to(_375) {
           margin-top: 14px;
         }
 
@@ -1147,20 +1187,24 @@ ol[type="a"] {
       }
     }
   }
-  .issue_page{
-    @include respond-to(_768){
+
+  .issue_page {
+    @include respond-to(_768) {
       flex-direction: column-reverse !important;
       border-bottom: 0 !important;
-      .sidebar{
+
+      .sidebar {
         border-bottom: 1px solid $primary !important;
       }
-      .issue_content{
+
+      .issue_content {
         width: 100% !important;
         padding: 0 !important;
         margin-top: 0;
       }
     }
   }
+
   .main {
     display: flex;
     padding: 0;
@@ -1172,7 +1216,8 @@ ol[type="a"] {
 
     .formating_rules {
       width: 100%;
-      a{
+
+      a {
         color: #138CD1;
       }
     }
@@ -1191,7 +1236,8 @@ ol[type="a"] {
 
     .collegiya_detail_content {
       width: 70%;
-      @include respond-to(_425){
+
+      @include respond-to(_425) {
         width: 100%;
       }
     }
@@ -1351,7 +1397,8 @@ ol[type="a"] {
         padding: 30px 20px;
         position: relative;
         list-style: none;
-        @include respond-to(_768){
+
+        @include respond-to(_768) {
           padding: 30px 0;
           font-weight: 600;
           font-size: 32px;
@@ -1381,7 +1428,8 @@ ol[type="a"] {
             &>li {
               width: 25%;
               margin-bottom: 40px;
-              @include respond-to(_768){
+
+              @include respond-to(_768) {
                 width: 50%;
               }
 
@@ -1390,7 +1438,8 @@ ol[type="a"] {
                 flex-direction: column;
                 gap: 20px;
                 align-items: center;
-                @include respond-to(_425){
+
+                @include respond-to(_425) {
                   font-weight: 600;
                   font-size: 15px;
                   line-height: 120%;
@@ -1398,7 +1447,8 @@ ol[type="a"] {
 
                 img {
                   max-width: 220px;
-                  @include respond-to(_425){
+
+                  @include respond-to(_425) {
                     max-width: 125px;
                   }
                 }
@@ -1429,11 +1479,13 @@ ol[type="a"] {
     .issue_content {
       width: 70%;
       padding-right: 50px;
-      @include respond-to(_768){
+
+      @include respond-to(_768) {
         width: 100%;
         padding: 0;
         border-bottom: 1px solid $primary;
       }
+
       .issue_author_block {
         border-bottom: 1px solid $primary;
         padding-bottom: 40px;
@@ -1445,7 +1497,8 @@ ol[type="a"] {
           font-size: 25px;
           line-height: 130%;
           color: #1F1F1F;
-          @include respond-to(_425){
+
+          @include respond-to(_425) {
             font-weight: 600;
             font-size: 17px;
             line-height: 120%;
@@ -1479,7 +1532,8 @@ ol[type="a"] {
       h4 {
         margin-top: 10px;
         font-size: 20px;
-        @include respond-to(_425){
+
+        @include respond-to(_425) {
           font-weight: 600;
           font-size: 17px;
           line-height: 120%;
@@ -1493,7 +1547,8 @@ ol[type="a"] {
         font-size: 18px;
         line-height: 25.2px;
         color: #1F1F1F;
-        @include respond-to(_425){
+
+        @include respond-to(_425) {
           font-weight: 400;
           font-size: 14px;
           line-height: 120%;
@@ -1553,11 +1608,13 @@ ol[type="a"] {
           font-size: 16px;
           line-height: 120%;
         }
-        .result_error{
+
+        .result_error {
           color: #D34747;
           text-align: left;
         }
-        .result_error_input{
+
+        .result_error_input {
           border: 1px solid #D34747;
         }
 
@@ -1565,22 +1622,26 @@ ol[type="a"] {
           text-align: center;
         }
       }
-      .auth_correct{
-        h6{
+
+      .auth_correct {
+        h6 {
           font-weight: 600;
           font-size: 25px;
           line-height: 120%;
           opacity: 1;
           text-align: center;
         }
-        .sign_in_btn{
+
+        .sign_in_btn {
           justify-content: center;
-          a{
+
+          a {
             opacity: 1;
             text-align: center;
           }
         }
       }
+
       .auth_block_2 {
         .input_row {
           display: flex;
@@ -1632,6 +1693,7 @@ ol[type="a"] {
 
       .default_btn {
         position: relative;
+
         &::after {
           content: "";
           width: 100%;
@@ -1672,7 +1734,8 @@ ol[type="a"] {
         position: relative;
         cursor: pointer;
         transition: all .4s ease;
-        @include respond-to(_425){
+
+        @include respond-to(_425) {
           flex-direction: column;
           padding: 18px 0;
           gap: 8px 0;
@@ -1696,7 +1759,8 @@ ol[type="a"] {
         &>a,
         p {
           width: 50%;
-          @include respond-to(_425){
+
+          @include respond-to(_425) {
             width: 100%;
           }
         }
@@ -1783,7 +1847,8 @@ ol[type="a"] {
 
     .search_content {
       width: 70%;
-      @include respond-to(_768){
+
+      @include respond-to(_768) {
         width: 100%;
       }
 
@@ -1795,7 +1860,8 @@ ol[type="a"] {
         .filter_right {
           display: flex;
           gap: 20px;
-          @include respond-to(_375){
+
+          @include respond-to(_375) {
             gap: 5px;
           }
         }
@@ -1812,7 +1878,8 @@ ol[type="a"] {
           margin-top: 20px;
           cursor: pointer;
           outline: none;
-          @include respond-to(_425){
+
+          @include respond-to(_425) {
             padding: 10px;
             font-weight: 400;
             font-size: 14px;
