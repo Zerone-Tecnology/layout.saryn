@@ -864,10 +864,12 @@ ol[type="a"] {
     .header_auth {
       @include respond-to(_1024) {
         &.active {
-          ul {
-            display: block;
-          }
+          display: block;
         }
+        display: none;
+        position: absolute;
+        top: 100%;
+        margin-top: 20px;
       }
 
       @include respond-to(_375) {
@@ -887,19 +889,14 @@ ol[type="a"] {
       ul {
         display: flex;
         gap: 10px;
-        @include respond-to(_1024) {
-          display: none;
-          position: absolute;
-          top: 100%;
-          margin-top: 20px;
-        }
-
 
         &.logged_in {
           ul {
             display: flex;
             align-items: center;
             position: relative;
+            padding: 0;
+            margin: 0;
 
             a {
               border: 0;

@@ -736,7 +736,13 @@ ol[type=a] {
   background-color: #008283;
 }
 @media only screen and (max-width: 1024px) {
-  .header .header_top .header_auth.active ul {
+  .header .header_top .header_auth {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: 20px;
+  }
+  .header .header_top .header_auth.active {
     display: block;
   }
 }
@@ -754,18 +760,12 @@ ol[type=a] {
   display: flex;
   gap: 10px;
 }
-@media only screen and (max-width: 1024px) {
-  .header .header_top .header_auth ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    margin-top: 20px;
-  }
-}
 .header .header_top .header_auth ul.logged_in ul {
   display: flex;
   align-items: center;
   position: relative;
+  padding: 0;
+  margin: 0;
 }
 .header .header_top .header_auth ul.logged_in ul a {
   border: 0;
