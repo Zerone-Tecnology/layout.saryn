@@ -736,14 +736,16 @@ ol[type=a] {
   background-color: #008283;
 }
 @media only screen and (max-width: 1024px) {
+  .header .header_top .header_auth.active ul {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1024px) {
   .header .header_top .header_auth ul {
     display: none;
     position: absolute;
     top: 100%;
     margin-top: 20px;
-  }
-  .header .header_top .header_auth ul.active {
-    display: block;
   }
 }
 @media only screen and (max-width: 375px) {

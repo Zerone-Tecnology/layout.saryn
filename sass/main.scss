@@ -862,17 +862,19 @@ ol[type="a"] {
     }
 
     .header_auth {
+      @include respond-to(_1024){
+        &.active {
+          ul{
+            display: block;
+          }
+        }
+      }
       ul {
-
         @include respond-to(_1024) {
           display: none;
           position: absolute;
           top: 100%;
           margin-top: 20px;
-
-          &.active {
-            display: block;
-          }
         }
 
         @include respond-to(_375) {
