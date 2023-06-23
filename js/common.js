@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
 	//SVG Fallback
 	// if(!Modernizr.svg) {
@@ -9,15 +9,15 @@ $(function() {
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
+	$("form").submit(function () { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
 			url: "mail.php", //Change
 			data: th.serialize()
-		}).done(function() {
+		}).done(function () {
 			alert("Thank you!");
-			setTimeout(function() {
+			setTimeout(function () {
 				// Done Functions
 				th.trigger("reset");
 			}, 1000);
@@ -28,25 +28,25 @@ $(function() {
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
-		if($("html").hasClass("chrome")) {
+		if ($("html").hasClass("chrome")) {
 			$.smoothScroll();
 		}
-	} catch(err) {
+	} catch (err) {
 
 	};
 
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
-	
-	
+	$("img, a").on("dragstart", function (event) { event.preventDefault(); });
+
+
 });
 
-$(window).load(function() {
-	$( document ).ready(function() {
+$(window).load(function () {
+	$(document).ready(function () {
 
 		$(".loader_inner").fadeOut();
 		$(".loader").delay(400).fadeOut("slow");
-	
-		$("#burger_menu").on("click", function(){
+
+		$("#burger_menu").on("click", function () {
 			$("#burger_menu").toggleClass("active");
 			$("#nav").fadeToggle("slow");
 			$("#mobile_search").toggleClass("active");
@@ -54,24 +54,28 @@ $(window).load(function() {
 			$(".header_language").toggleClass("active");
 			$(".header").toggleClass("active");
 		});
-		$(".search_btn").on("click", function(){
+		$(".search_btn").on("click", function () {
 			$(".search_input").fadeIn("slow");
 			$(".search_btn_close").fadeIn("slow");
-			$(".search_btn").attr("type","submit");
+			$(".search_btn").attr("type", "submit");
 		});
-		$(".search_btn_close").on("click", function(){
+		$(".search_btn_close").on("click", function () {
 			$(".search_input").fadeOut("slow");
 			$(".search_btn_close").fadeOut("slow");
-			$(".search_btn").removeAttr("type","submit");
-	
+			$(".search_btn").removeAttr("type", "submit");
+
 		});
-	
-		$(".archive_select li").on("click", function(){
+
+		$(".archive_select li").on("click", function () {
 			$(this).toggleClass("active");
 		});
-		$(".logged_in_dropdown_btn").on("click",function(){
+		$(".logged_in_dropdown_btn").on("click", function () {
 			$(".logged_in_dropdown").fadeToggle("slow");
 		});
-	});    
+		$(".dropdown_menu").on("click", function () {
+			$("sub_menu", this).fadeToggle("slow");
+			// alert("this");
+		});
+	});
 });
 

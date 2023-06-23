@@ -532,18 +532,23 @@ ol[type=a] {
   padding: 0;
   position: relative;
 }
-.nav .menu > .disable-link > a {
+.nav .menu .disable-link > a {
   pointer-events: none;
+}
+.nav .menu > li {
+  width: 100%;
+  text-align: center;
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1px;
   }
 }
 .nav .menu li {
   border-left: 1px solid #fff;
-  padding: 18px 9px;
+  padding: 18px 0;
   margin: 0;
   transition: all 0.4s ease;
   position: relative;
@@ -554,31 +559,36 @@ ol[type=a] {
   cursor: pointer;
 }
 .nav .menu li.dropdown_menu::after {
-  content: url("../img/menu_vectore.png");
+  content: url("/plugins/themes/healthSciences/img/menu_vectore.png");
   height: 6px;
   display: flex;
   justify-content: center;
-  top: 52%;
+  bottom: 15%;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .nav .menu li.dropdown_menu:hover::after {
-  content: url("../img/menu_hover_vector.png");
+  content: url("/plugins/themes/healthSciences/img/menu_hover_vector.png");
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu li {
     border: 0;
     background-color: #008283;
     width: 100%;
-    margin: 1px;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 .nav .menu li a {
-  width: 100%;
-  display: block;
-  height: 100%;
   color: #fff;
+}
+@media only screen and (max-width: 425px) {
+  .nav .menu li a {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23.4px;
+  }
 }
 .nav .menu li .sub_menu {
   display: none;
@@ -604,6 +614,8 @@ ol[type=a] {
 .nav .menu li .sub_menu > li {
   border: 0;
   background: #F6F6F6;
+  cursor: pointer;
+  text-align: left;
   cursor: pointer;
 }
 .nav .menu li .sub_menu > li:hover {
@@ -756,24 +768,18 @@ ol[type=a] {
     margin-bottom: 5px;
   }
 }
-.header .header_top .header_auth ul {
-  display: flex;
-  gap: 10px;
-}
-.header .header_top .header_auth ul.logged_in ul {
+.header .header_top .header_auth.logged_in ul {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0;
-  margin: 0;
 }
-.header .header_top .header_auth ul.logged_in ul a {
+.header .header_top .header_auth.logged_in ul a {
   border: 0;
   width: 100%;
   height: 100%;
   display: block;
 }
-.header .header_top .header_auth ul.logged_in ul .logged_in_dropdown {
+.header .header_top .header_auth.logged_in ul .logged_in_dropdown {
   display: none;
   position: absolute;
   list-style: none;
@@ -785,19 +791,25 @@ ol[type=a] {
   top: 100%;
   border: 1px solid #1F1F1F;
 }
-.header .header_top .header_auth ul.logged_in ul .logged_in_dropdown li {
+.header .header_top .header_auth.logged_in ul .logged_in_dropdown li {
   padding: 20px;
   margin: 0;
 }
-.header .header_top .header_auth ul.logged_in ul .logged_in_dropdown li a {
+.header .header_top .header_auth.logged_in ul .logged_in_dropdown li a {
   padding: 0;
 }
-.header .header_top .header_auth ul.logged_in ul .logged_in_dropdown li:hover {
+.header .header_top .header_auth.logged_in ul .logged_in_dropdown li:hover {
   background-color: #E0E0E0;
   cursor: pointer;
 }
-.header .header_top .header_auth ul.logged_in ul .logged_in_dropdown li:hover a {
+.header .header_top .header_auth.logged_in ul .logged_in_dropdown li:hover a {
   background: none;
+}
+.header .header_top .header_auth ul {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
 }
 .header .header_top .header_auth ul a {
   padding: 5px 6px;
@@ -1221,6 +1233,9 @@ ol[type=a] {
   }
 }
 .wrapper .main .archive_content .archive_select li {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 42px;
   cursor: pointer;
   position: relative;
   margin: 0;
@@ -1269,7 +1284,7 @@ ol[type=a] {
   }
 }
 .wrapper .main .archive_content .archive_select > li::after {
-  content: url("../img/archive_dropdown.png");
+  content: url("/plugins/themes/healthSciences/img/archive_dropdown.png");
   position: absolute;
   right: 0;
   top: 0;
