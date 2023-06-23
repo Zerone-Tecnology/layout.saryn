@@ -740,22 +740,26 @@ ol[type=a] {
     display: block;
   }
 }
+@media only screen and (max-width: 375px) {
+  .header .header_top .header_auth.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .header_top .header_auth.active ul a {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+.header .header_top .header_auth ul {
+  display: flex;
+  gap: 10px;
+}
 @media only screen and (max-width: 1024px) {
   .header .header_top .header_auth ul {
     display: none;
     position: absolute;
     top: 100%;
     margin-top: 20px;
-  }
-}
-@media only screen and (max-width: 375px) {
-  .header .header_top .header_auth ul.active {
-    display: flex;
-    flex-direction: column;
-  }
-  .header .header_top .header_auth ul.active a {
-    text-align: center;
-    margin-bottom: 5px;
   }
 }
 .header .header_top .header_auth ul.logged_in ul {

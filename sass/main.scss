@@ -862,23 +862,17 @@ ol[type="a"] {
     }
 
     .header_auth {
-      @include respond-to(_1024){
+      @include respond-to(_1024) {
         &.active {
-          ul{
+          ul {
             display: block;
           }
         }
       }
-      ul {
-        @include respond-to(_1024) {
-          display: none;
-          position: absolute;
-          top: 100%;
-          margin-top: 20px;
-        }
 
-        @include respond-to(_375) {
-          &.active {
+      @include respond-to(_375) {
+        &.active {
+          ul {
             display: flex;
             flex-direction: column;
 
@@ -888,6 +882,18 @@ ol[type="a"] {
             }
           }
         }
+      }
+
+      ul {
+        display: flex;
+        gap: 10px;
+        @include respond-to(_1024) {
+          display: none;
+          position: absolute;
+          top: 100%;
+          margin-top: 20px;
+        }
+
 
         &.logged_in {
           ul {
