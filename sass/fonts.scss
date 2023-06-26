@@ -1,6 +1,4 @@
 @import "bourbon/bourbon";
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap');
 @include font-face("RobotoRegular", "../fonts/RobotoRegular/RobotoRegular", $file-formats: eot woff ttf);
-@include font-face("Segoe UI", "../fonts/SegoeUI/SegoeUI", $file-formats: eot woff ttf);
-@include font-face("Cambria", "../fonts/Cambria/Cambria", $file-formats: eot woff ttf);
-@include font-face("CM Literata", "../fonts/CM Literata/cmlirta_n", $file-formats: eot woff ttf);
+@include font-face("Georgia", "../fonts/Georgia/Georgia", $file-formats: eot woff ttf);
+

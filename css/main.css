@@ -379,6 +379,22 @@ input :-ms-input-placeholder {
   margin-right: 13px;
 }
 
+.registration_slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.registration_slider .registration_slider_block {
+  max-width: 638px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
 .attention {
   color: #D34747;
   font-style: normal;
@@ -1443,6 +1459,7 @@ ol[type=a] {
 }
 .wrapper .main .auth_content .auth_block_2 .input_row {
   display: flex;
+  width: 638px;
 }
 .wrapper .main .auth_content .auth_block_2 .input_row input {
   margin-right: 20px;
