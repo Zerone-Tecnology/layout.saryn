@@ -542,7 +542,6 @@ ol[type=a] {
 .nav .menu {
   list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -553,7 +552,6 @@ ol[type=a] {
   pointer-events: none;
 }
 .nav .menu > li {
-  width: 100%;
   text-align: center;
 }
 @media only screen and (max-width: 1024px) {
@@ -565,26 +563,30 @@ ol[type=a] {
 }
 .nav .menu li {
   border-left: 1px solid #fff;
-  padding: 15px;
+  padding: 15px 10px 10px;
   margin: 0;
   transition: all 0.4s ease;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.nav .menu li.dropdown_menu .dropdown-item {
+  padding: 0;
 }
 .nav .menu li.dropdown_menu::after {
-  content: url("../img/menu_vectore.png");
-  height: 6px;
-  display: flex;
-  justify-content: center;
-  bottom: 15%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  content: "";
+  height: 5px;
+  width: 15px;
+  display: block;
+  background-image: url("../img/menu_vectore.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0 auto;
+  transition: all 0.25s;
+  margin-top: 5px;
 }
 .nav .menu li.dropdown_menu:hover::after {
-  content: url("../img/menu_hover_vector.png");
+  transform: rotate(180deg);
+  background-image: url("../img/menu_hover_vector.png");
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu li {
