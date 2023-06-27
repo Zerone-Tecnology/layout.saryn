@@ -1187,7 +1187,9 @@ ol[type="a"] {
           transition: all 0.4s linear;
         }
       }
-
+      button.search_btn{
+        display: none;
+      }
       .search_btn {
         padding: 11px;
         border: 1px solid #1F1F1F;

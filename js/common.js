@@ -38,15 +38,20 @@ $(window).load(function () {
 			$(".header_language").toggleClass("active");
 			$(".header").toggleClass("active");
 		});
-		$(".search_btn").on("click", function () {
+		$("a.search_btn").on("click", function () {
+			$("button.search_btn").fadeIn();
+			$(this).fadeOut();
 			$(".search_input").fadeIn("slow");
 			$(".search_btn_close").fadeIn("slow");
-			$(".search_btn").attr("type", "submit");
+			// $(".search_btn").attr("type", "submit");
 		});
 		$(".search_btn_close").on("click", function () {
+			$("button.search_btn").fadeOut();
+			$(this).fadeIn();
+
 			$(".search_input").fadeOut("slow");
 			$(".search_btn_close").fadeOut("slow");
-			$(".search_btn").removeAttr("type", "submit");
+			// $(".search_btn").removeAttr("type", "submit");
 
 		});
 
@@ -67,6 +72,7 @@ $(window).load(function () {
 			$(".registration_slider_block").css("transform", `translate(-${parent_registration_width}px, 0px)`);
 			parent_registration_width += parent_registration_width;
 		});
+
 	});
 });
 
