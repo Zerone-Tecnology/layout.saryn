@@ -138,7 +138,7 @@ a:hover {
   transition: all 0.3s ease;
 }
 .issue_block:hover {
-  box-shadow: 0px 8px 17px 8px rgba(0, 130, 131, 0.66);
+  box-shadow: 8px 8px 0px 1px rgba(0, 130, 131, 0.66);
   transition: all 0.3s ease;
 }
 .issue_block h4 {
@@ -547,6 +547,7 @@ ol[type=a] {
   margin: 0;
   padding: 0;
   position: relative;
+  align-items: stretch;
 }
 .nav .menu .disable-link > a {
   pointer-events: none;
@@ -564,18 +565,16 @@ ol[type=a] {
 }
 .nav .menu li {
   border-left: 1px solid #fff;
-  padding: 18px 0;
+  padding: 15px;
   margin: 0;
   transition: all 0.4s ease;
   position: relative;
-  min-height: 88px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 .nav .menu li.dropdown_menu::after {
-  content: url("/plugins/themes/healthSciences/img/menu_vectore.png");
+  content: url("../img/menu_vectore.png");
   height: 6px;
   display: flex;
   justify-content: center;
@@ -585,7 +584,7 @@ ol[type=a] {
   transform: translate(-50%, -50%);
 }
 .nav .menu li.dropdown_menu:hover::after {
-  content: url("/plugins/themes/healthSciences/img/menu_hover_vector.png");
+  content: url("../img/menu_hover_vector.png");
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu li {
@@ -616,6 +615,7 @@ ol[type=a] {
   border: 1px solid #1F1F1F;
   top: 100%;
   z-index: 99;
+  width: 320px;
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu li .sub_menu {
@@ -632,7 +632,9 @@ ol[type=a] {
   background: #F6F6F6;
   cursor: pointer;
   text-align: left;
-  cursor: pointer;
+  justify-content: flex-start;
+  min-height: auto;
+  padding: 15px;
 }
 .nav .menu li .sub_menu > li:hover {
   background-color: #C4E2E2;

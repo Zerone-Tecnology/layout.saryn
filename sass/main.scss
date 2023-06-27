@@ -215,7 +215,7 @@ a {
   transition: all .3s ease;
 
   &:hover {
-    box-shadow: 0px 8px 17px 8px rgba(0, 130, 131, 0.66);
+    box-shadow: 8px 8px 0px 1px rgba(0, 130, 131, 0.66);
     transition: all .3s ease;
   }
 
@@ -634,14 +634,15 @@ ol[type="a"] {
     margin: 0;
     padding: 0;
     position: relative;
+    align-items: stretch;
 
     .disable-link {
-      &>a {
+      & > a {
         pointer-events: none;
       }
     }
 
-    &>li {
+    & > li {
       width: 100%;
       text-align: center;
     }
@@ -654,19 +655,18 @@ ol[type="a"] {
 
     li {
       border-left: 1px solid #fff;
-      padding: 18px 0;
+      padding: 15px;
       margin: 0;
       transition: all .4s ease;
       position: relative;
-      min-height: 88px;
+      // min-height: 88px;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
 
       &.dropdown_menu {
         &::after {
-          content: url("/plugins/themes/healthSciences/img/menu_vectore.png");
+          content: url("../img/menu_vectore.png");
           height: 6px;
           display: flex;
           justify-content: center;
@@ -678,7 +678,7 @@ ol[type="a"] {
 
         &:hover {
           &::after {
-            content: url("/plugins/themes/healthSciences/img/menu_hover_vector.png");
+            content: url("../img/menu_hover_vector.png");
           }
         }
       }
@@ -711,6 +711,7 @@ ol[type="a"] {
         border: 1px solid #1F1F1F;
         top: 100%;
         z-index: 99;
+        width: 320px;
 
         @include respond-to(_1024) {
           position: relative;
@@ -726,12 +727,14 @@ ol[type="a"] {
           }
         }
 
-        &>li {
+        & > li {
           border: 0;
           background: #F6F6F6;
           cursor: pointer;
           text-align: left;
-          cursor: pointer;
+          justify-content: flex-start;
+          min-height: auto;
+          padding: 15px;
 
           &:hover {
             background-color: #C4E2E2;
