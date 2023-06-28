@@ -38,20 +38,19 @@ $(window).load(function () {
 			$(".header_language").toggleClass("active");
 			$(".header").toggleClass("active");
 		});
-		$("a.search_btn").on("click", function () {
-			$("button.search_btn").fadeIn();
-			$(this).fadeOut();
+
+		$("#search_btn").on("click", function () {
+			$("button.search_btn").css("display", "flex");
+			$("#search_btn").fadeOut();
 			$(".search_input").fadeIn("slow");
 			$(".search_btn_close").fadeIn("slow");
-			// $(".search_btn").attr("type", "submit");
 		});
-		$(".search_btn_close").on("click", function () {
-			$("button.search_btn").fadeOut();
-			$(this).fadeIn();
 
+		$(".search_btn_close").on("click", function () {
+			$("#search_btn_submit").fadeOut();
+			$("#search_btn").fadeIn();
 			$(".search_input").fadeOut("slow");
 			$(".search_btn_close").fadeOut("slow");
-			// $(".search_btn").removeAttr("type", "submit");
 
 		});
 
@@ -68,11 +67,30 @@ $(window).load(function () {
 
 		var parent_registration_width = $(".registration_slider_block").width();
 
-		$(".registration_slider_next").on("click", function(){
+		$(".registration_slider_next").on("click", function () {
 			$(".registration_slider_block").css("transform", `translate(-${parent_registration_width}px, 0px)`);
 			parent_registration_width += parent_registration_width;
 		});
-
+		$("input[name=email]").on("input", function () {
+			var inputValue = $(this).val();
+			$("input[name=username]").val(inputValue);
+			
+			if($("input[name=email]").val.lenght > 1){
+				alert("required");
+			}
+		});
+		
+		// jQuery.validator.setDefaults({
+		// 	debug: true,
+		// 	success: "valid"
+		// });
+		// $("input[name=email]").validate({
+		// 	rules: {
+		// 		field: {
+		// 			required: true
+		// 		}
+		// 	}
+		// });
 	});
 });
 

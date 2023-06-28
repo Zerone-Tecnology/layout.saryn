@@ -457,19 +457,47 @@ input {
   }
 }
 
-.registration_slider{
+.registration_slider {
   display: flex;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
   transition: all .3s ease;
-  .registration_slider_block{
+
+  .registration_slider_block {
     max-width: 638px;
-    width: 100%;
+    width: 638px;
     display: flex;
     flex-direction: column;
     position: relative;
     transition: all .3s ease;
+    .form_count{
+      width: max-content;
+      font-size: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 130%;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      &::after,&::before{
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        top: 50%;
+
+        border-bottom: 1px solid #000;
+      }
+      &::before{
+        right: 100%;
+        margin-right: 20px;
+      }
+      &::after{
+        left: 100%;
+        margin-left: 20px;
+      }
+    }
   }
 }
 
@@ -566,7 +594,11 @@ input {
 button {
   padding: 0;
 }
-
+.forgot_password{
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
 .pages_btns {
   list-style: none;
   display: flex;
@@ -637,12 +669,12 @@ ol[type="a"] {
     align-items: stretch;
 
     .disable-link {
-      & > a {
+      &>a {
         pointer-events: none;
       }
     }
 
-    & > li {
+    &>li {
       // width: 100%;
       text-align: center;
     }
@@ -661,28 +693,29 @@ ol[type="a"] {
       position: relative;
 
       &.dropdown_menu {
-        .dropdown-item{
+        .dropdown-item {
           padding: 0;
         }
-        &::after {
-          content: '';
-          height: 5px;
-          width: 15px;
-          display: block;
-          background-image: url("../img/menu_vectore.png");
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-position: center;
-          margin: 0 auto;
-          transition: all 0.25s;
-          margin-top: 5px;
-        }
+
+        // &::after {
+        //   content: '';
+        //   height: 5px;
+        //   width: 15px;
+        //   display: block;
+        //   background-image: url("../img/menu_vectore.png");
+        //   background-repeat: no-repeat;
+        //   background-size: contain;
+        //   background-position: center;
+        //   margin: 0 auto;
+        //   transition: all 0.25s;
+        //   margin-top: 5px;
+        // }
 
         &:hover {
-          &::after {
-            transform: rotate(180deg);
-            background-image: url("../img/menu_hover_vector.png");
-          }
+          // &::after {
+          //   transform: rotate(180deg);
+          //   background-image: url("../img/menu_hover_vector.png");
+          // }
         }
       }
 
@@ -730,7 +763,7 @@ ol[type="a"] {
           }
         }
 
-        & > li {
+        &>li {
           border: 0;
           background: #F6F6F6;
           cursor: pointer;
@@ -873,15 +906,17 @@ ol[type="a"] {
 
       a {
         padding: 5px 6px;
-        border: 1px solid $primary;
+        border: 1px solid #1F1F1F;
         border-radius: 50%;
         font-weight: 400;
         font-size: 16px;
         line-height: 130%;
-        width: 33px;
-        height: 33px;
-        display: block;
+        width: 37px;
+        height: 37px;
+        display: flex;
         margin-left: 10px;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
           background-color: $hover;
@@ -921,6 +956,10 @@ ol[type="a"] {
       }
 
       &.logged_in {
+        img{
+          width: 40px;
+          height: 40px;
+        }
         ul {
           display: flex;
           align-items: center;
@@ -1134,6 +1173,7 @@ ol[type="a"] {
       }
 
       .search_btn_close {
+        cursor: pointer;
         position: absolute;
         margin-top: 28px;
         display: none;
@@ -1190,10 +1230,13 @@ ol[type="a"] {
           transition: all 0.4s linear;
         }
       }
-      button.search_btn{
+
+      #search_btn_submit {
         display: none;
       }
+
       .search_btn {
+        cursor: pointer;
         padding: 11px;
         border: 1px solid #1F1F1F;
         border-radius: 50%;
@@ -1438,9 +1481,13 @@ ol[type="a"] {
         font-size: 42px;
         line-height: 56px;
         margin: 0;
-        padding: 30px 20px;
+        padding: 0;
         position: relative;
         list-style: none;
+        &:hover {
+          background: #E0E0E0;
+          transition: all .4s ease;
+        }
 
         @include respond-to(_768) {
           padding: 30px 0;
@@ -1456,10 +1503,10 @@ ol[type="a"] {
           cursor: pointer;
           position: relative;
           margin: 0;
-
+          padding: 30px 20px;
+          
           &.active {
             color: #008283;
-
             ul {
               display: flex;
             }
@@ -1509,10 +1556,10 @@ ol[type="a"] {
             content: url("/plugins/themes/healthSciences/img/archive_dropdown.png");
             position: absolute;
             right: 0;
-            top: 0;
-            z-index: -9;
+            top: 40px;
+            transform: translateY(-50%);
+            z-index: 0;
             width: 24px;
-            height: 12px;
           }
         }
 
@@ -1712,10 +1759,7 @@ ol[type="a"] {
       .checkbox {
         display: flex;
         align-items: center;
-        gap: 0 15px;
-
-
-
+        gap: 4px;
         input {
           zoom: 2;
           width: fit-content;
@@ -1737,6 +1781,19 @@ ol[type="a"] {
       input {
         width: 100%;
         margin-top: 20px;
+      }
+      select[name=country]{
+        margin-top: 20px;
+        padding: 15px 20px;
+        border: 1px solid #1F1F1F;
+        font-family: "Segoe UI", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: #1F1F1F;
+        opacity: 0.8;
+        outline: none;
       }
 
       .default_btn {
@@ -1765,6 +1822,11 @@ ol[type="a"] {
           &:hover {
             opacity: 1;
           }
+        }
+        .info_text{
+          font-size: 18px;
+          line-height: 140%;
+          text-transform: none;
         }
       }
     }
@@ -1900,9 +1962,43 @@ ol[type="a"] {
         width: 100%;
       }
 
+      .info_text {
+        margin-bottom: 20px;
+      }
+
+      .label_row {
+        display: flex;
+        gap: 23%;
+
+        label {
+          color: var(--grey-text-2, #6D6D6D);
+          font-size: 14px;
+          font-family: 'Segoe UI', sans-serif;
+          line-height: 130%;
+          text-transform: uppercase;
+          width: 50%;
+        }
+      }
+
       .filter {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 60px;
+        margin-top: 20px;
+        position: relative;
+
+        &::after {
+          content: "";
+          height: 1px;
+          background: var(--grey, #3D3D3D);
+          position: absolute;
+          bottom: -8px;
+          width: 15%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
 
         .filter_left,
         .filter_right {
@@ -1922,8 +2018,6 @@ ol[type="a"] {
           font-weight: 400;
           font-size: 18px;
           line-height: 130%;
-          margin-bottom: 60px;
-          margin-top: 20px;
           cursor: pointer;
           outline: none;
 
@@ -1931,6 +2025,55 @@ ol[type="a"] {
             padding: 10px;
             font-weight: 400;
             font-size: 14px;
+            line-height: 120%;
+          }
+        }
+
+      }
+      .seacrh_form{
+        position: relative;
+        margin-bottom: 30px;
+        .search_btn {
+          cursor: pointer;
+          padding: 11px;
+          border: 1px solid #1F1F1F;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          right: 5%;
+          top: 0;
+          margin-top: 20px;
+          position: absolute;
+  
+          @include respond-to(_375) {
+            margin-top: 14px;
+          }
+  
+          img {
+            width: 18px;
+            height: 18px;
+          }
+  
+          &:hover {
+            background-color: $hover;
+          }
+        }
+  
+        .search_input {
+          border-left: 0;
+          border-right: 0;
+          width: 100%;
+          padding: 24px 0;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 130%;
+  
+          @include respond-to(_375) {
+            font-weight: 600;
+            font-size: 17px;
             line-height: 120%;
           }
         }
