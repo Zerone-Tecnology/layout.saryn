@@ -50,8 +50,8 @@ $(window).load(function () {
 
 		});
 
-		$(".archive_select li").on("click", function () {
-			$(this).toggleClass("active");
+		$(".archive_select li span").on("click", function () {
+			$(this.parentElement).toggleClass("active");
 		});
 		$(".logged_in_dropdown_btn").on("click", function () {
 			$(".logged_in_dropdown").fadeToggle("slow");
