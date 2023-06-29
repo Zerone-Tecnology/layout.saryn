@@ -79,18 +79,12 @@ $(window).load(function () {
 				alert("required");
 			}
 		});
+		var registration_slider = $(".registration_slider").width();
+
+		if($(".registration_slider_block").length){
+			$(".registration_slider_block").css("min-width",`${registration_slider}px`);
+		}
 		
-		// jQuery.validator.setDefaults({
-		// 	debug: true,
-		// 	success: "valid"
-		// });
-		// $("input[name=email]").validate({
-		// 	rules: {
-		// 		field: {
-		// 			required: true
-		// 		}
-		// 	}
-		// });
 	});
 });
 
