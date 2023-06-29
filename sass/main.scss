@@ -1825,8 +1825,6 @@ ol[type="a"] {
       .auth_block_2 {
         .input_row {
           display: flex;
-          width: 638px;
-
           input {
             margin-right: 20px;
 
@@ -2278,4 +2276,10 @@ fieldset{
     padding: 0;
     margin: 0;
   }
+}
+.back_form{
+  border: 0;
+  padding: 0;
+  background:transparent;
+  position: absolute;
 }

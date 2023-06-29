@@ -84,7 +84,15 @@ $(window).load(function () {
 		if($(".registration_slider_block").length){
 			$(".registration_slider_block").css("min-width",`${registration_slider}px`);
 		}
-		
+		// $("#back_form_2").on("click", function(){
+		// 	$(this).parent().css("left","0px");
+		// });
+		// $("#back_form_3").on("click", function(){
+		// 	$(this).parent().css("left","-638px");
+		// });
+		// $(".registration_slider_block .default_btn").on("click", function(){
+		// 	$(".registration_slider_block").css("lef")
+		// });
 	});
 });
 
