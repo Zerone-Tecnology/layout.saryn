@@ -1561,6 +1561,12 @@ ol[type="a"] {
           position: relative;
           margin: 0;
           padding: 30px 20px;
+          @include respond-to(_768){
+            padding: 21px 0;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 100%;
+          }
 
           &.active {
             color: #008283;

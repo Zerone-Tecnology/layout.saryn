@@ -1359,6 +1359,14 @@ ol[type=a] {
   margin: 0;
   padding: 30px 20px;
 }
+@media only screen and (max-width: 768px) {
+  .wrapper .main .archive_content .archive_select li {
+    padding: 21px 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+}
 .wrapper .main .archive_content .archive_select li.active {
   color: #008283;
 }
