@@ -671,12 +671,12 @@ ol[type="a"] {
   .menu {
     list-style: none;
     display: flex;
-    // justify-content: space-between;
-    align-items: center;
+    // align-items: center;
     margin: 0;
     padding: 0;
     position: relative;
     align-items: stretch;
+    white-space: nowrap;
 
     .disable-link {
       &>a {
@@ -685,7 +685,6 @@ ol[type="a"] {
     }
 
     &>li {
-      // width: 100%;
       text-align: center;
     }
 
@@ -697,7 +696,7 @@ ol[type="a"] {
 
     li {
       border-left: 1px solid #fff;
-      padding: 15px 10px 10px;
+      padding: 15px 10px;
       margin: 0;
       transition: all .4s ease;
       position: relative;
@@ -705,27 +704,6 @@ ol[type="a"] {
       &.dropdown_menu {
         .dropdown-item {
           padding: 0;
-        }
-
-        // &::after {
-        //   content: '';
-        //   height: 5px;
-        //   width: 15px;
-        //   display: block;
-        //   background-image: url("../img/menu_vectore.png");
-        //   background-repeat: no-repeat;
-        //   background-size: contain;
-        //   background-position: center;
-        //   margin: 0 auto;
-        //   transition: all 0.25s;
-        //   margin-top: 5px;
-        // }
-
-        &:hover {
-          // &::after {
-          //   transform: rotate(180deg);
-          //   background-image: url("../img/menu_hover_vector.png");
-          // }
         }
       }
 
@@ -758,12 +736,14 @@ ol[type="a"] {
         border: 1px solid #1F1F1F;
         top: 100%;
         z-index: 99;
-        // width: 320px;
+        white-space: initial;
 
         @include respond-to(_1024) {
           position: relative;
           width: 100%;
-          background: #F6F6F6;
+          background: #E0E0E0;
+          border: 0;
+
 
           a {
             &:hover {
@@ -796,6 +776,9 @@ ol[type="a"] {
       &:hover {
         background-color: #E0E0E0;
         transition: all .4s ease;
+        @include respond-to(_1024){
+          background-color: #F6F6F6;
+        }
 
         a {
           color: $primary;
@@ -1593,6 +1576,7 @@ ol[type="a"] {
             padding: 0;
             margin-top: 40px;
             flex-wrap: wrap;
+            width: 100%;
 
             &>li {
               width: 25%;
@@ -1627,15 +1611,10 @@ ol[type="a"] {
         }
 
         &>li {
-          &::after {
-            content: url("/plugins/themes/healthSciences/img/archive_dropdown.png");
-            position: absolute;
-            right: 0;
-            top: 40px;
-            transform: translateY(-50%);
-            z-index: 0;
-            width: 24px;
-          }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
         }
 
         &:last-child {

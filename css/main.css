@@ -579,11 +579,11 @@ ol[type=a] {
 .nav .menu {
   list-style: none;
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
   position: relative;
   align-items: stretch;
+  white-space: nowrap;
 }
 .nav .menu .disable-link > a {
   pointer-events: none;
@@ -600,7 +600,7 @@ ol[type=a] {
 }
 .nav .menu li {
   border-left: 1px solid #fff;
-  padding: 15px 10px 10px;
+  padding: 15px 10px;
   margin: 0;
   transition: all 0.4s ease;
   position: relative;
@@ -638,12 +638,14 @@ ol[type=a] {
   border: 1px solid #1F1F1F;
   top: 100%;
   z-index: 99;
+  white-space: initial;
 }
 @media only screen and (max-width: 1024px) {
   .nav .menu li .sub_menu {
     position: relative;
     width: 100%;
-    background: #F6F6F6;
+    background: #E0E0E0;
+    border: 0;
   }
   .nav .menu li .sub_menu a:hover a {
     color: #fff;
@@ -667,6 +669,11 @@ ol[type=a] {
 .nav .menu li:hover {
   background-color: #E0E0E0;
   transition: all 0.4s ease;
+}
+@media only screen and (max-width: 1024px) {
+  .nav .menu li:hover {
+    background-color: #F6F6F6;
+  }
 }
 .nav .menu li:hover a {
   color: #1F1F1F;
@@ -1364,6 +1371,7 @@ ol[type=a] {
   padding: 0;
   margin-top: 40px;
   flex-wrap: wrap;
+  width: 100%;
 }
 .wrapper .main .archive_content .archive_select li ul > li {
   width: 25%;
@@ -1395,14 +1403,11 @@ ol[type=a] {
     max-width: 125px;
   }
 }
-.wrapper .main .archive_content .archive_select > li::after {
-  content: url("/plugins/themes/healthSciences/img/archive_dropdown.png");
-  position: absolute;
-  right: 0;
-  top: 40px;
-  transform: translateY(-50%);
-  z-index: 0;
-  width: 24px;
+.wrapper .main .archive_content .archive_select > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .wrapper .main .archive_content .archive_select:last-child {
   border-bottom: 1px solid #3D3D3D;
